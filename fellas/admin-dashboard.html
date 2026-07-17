@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | fellaż</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/admin.css" />
+  </head>
+  <body>
+    <div class="admin-wrapper">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">fellaż Admin</div>
+        <nav>
+          <ul>
+            <li class="active">
+              <a href="#" data-section="products"
+                ><i class="fas fa-box"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="#" data-section="orders"
+                ><i class="fas fa-shopping-cart"></i> Orders</a
+              >
+            </li>
+            <li>
+              <a href="#" data-section="settings"
+                ><i class="fas fa-cog"></i> Settings</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <button id="logoutBtn" class="logout-btn">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <header class="top-header">
+          <h1 id="sectionTitle">Products</h1>
+          <span class="admin-badge">Admin</span>
+        </header>
+
+        <!-- Products Section -->
+        <section id="productsSection" class="section active">
+          <div class="section-actions">
+            <button id="addProductBtn" class="btn-primary">
+              <i class="fas fa-plus"></i> Add Product
+            </button>
+          </div>
+          <div id="productList" class="product-list">
+            <!-- Products injected by JS -->
+          </div>
+          <!-- Add/Edit Form Modal -->
+          <div id="productModal" class="modal" style="display: none">
+            <div class="modal-content">
+              <span class="close-modal" id="closeModal">&times;</span>
+              <h2 id="modalTitle">Add Product</h2>
+              <form id="productForm">
+                <input type="hidden" id="productId" />
+                <div class="form-group">
+                  <label>Product Name</label>
+                  <input type="text" id="prodName" required />
+                </div>
+                <div class="form-group">
+                  <label>Price (₦)</label>
+                  <input type="number" id="prodPrice" required />
+                </div>
+                <div class="form-group">
+                  <label>Category</label>
+                  <select id="prodCategory">
+                    <option value="tee">T-Shirt</option>
+                    <option value="hoodie">Hoodie</option>
+                    <option value="longsleeve">Long Sleeve</option>
+                    <option value="sleeveless">Sleeveless</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Image URL</label>
+                  <input
+                    type="text"
+                    id="prodImage"
+                    placeholder="images/product.jpg"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Description</label>
+                  <textarea
+                    id="prodDescription"
+                    rows="3"
+                    placeholder="Product description..."
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <label>Features (comma separated)</label>
+                  <input
+                    type="text"
+                    id="prodFeatures"
+                    placeholder="100% cotton, Relaxed fit, etc."
+                  />
+                </div>
+                <div class="form-group">
+                  <label
+                    ><input type="checkbox" id="prodInStock" checked /> In
+                    Stock</label
+                  >
+                </div>
+                <div class="form-group">
+                  <label>Badge (optional)</label>
+                  <select id="prodBadge">
+                    <option value="">None</option>
+                    <option value="HOT">🔥 Hot</option>
+                    <option value="NEW">✨ New</option>
+                    <option value="LIMITED">⏳ Limited</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn-primary">Save Product</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- Orders Section -->
+        <section id="ordersSection" class="section" style="display: none">
+          <h2>Orders</h2>
+          <div id="orderList" class="order-list">
+            <!-- Orders injected by JS -->
+            <p>No orders yet.</p>
+          </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settingsSection" class="section" style="display: none">
+          <h2>Settings</h2>
+          <div class="settings-group">
+            <label>Admin Password</label>
+            <input
+              type="password"
+              id="newPassword"
+              placeholder="New password"
+            />
+            <button id="changePasswordBtn" class="btn-primary">
+              Update Password
+            </button>
+            <p style="color: #b9b3c2; font-size: 0.8rem; margin-top: 8px">
+              Leave blank to keep current.
+            </p>
+          </div>
+          <div class="settings-group">
+            <label>Shipping Threshold (free above)</label>
+            <input type="number" id="shippingThreshold" placeholder="50000" />
+            <button id="saveShippingBtn" class="btn-primary">
+              Save Shipping
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/admin.js"></script>
+  </body>
+</html>

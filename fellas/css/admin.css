@@ -1,0 +1,327 @@
+/* admin.css - minimal version */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #07050a;
+  color: #f4f1ea;
+}
+.admin-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  width: 240px;
+  background: #0f0c13;
+  border-right: 1px solid #2a2533;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+.sidebar .logo {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  color: #cba258;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+.sidebar nav ul {
+  list-style: none;
+  flex: 1;
+}
+.sidebar nav ul li {
+  margin-bottom: 8px;
+}
+.sidebar nav ul li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  color: #b9b3c2;
+  text-decoration: none;
+  transition:
+    background 0.2s,
+    color 0.2s;
+  font-weight: 500;
+}
+.sidebar nav ul li a:hover,
+.sidebar nav ul li.active a {
+  background: #1a151f;
+  color: #f4f1ea;
+}
+.sidebar nav ul li.active a {
+  border-left: 3px solid #cba258;
+}
+.logout-btn {
+  margin-top: auto;
+  background: transparent;
+  border: 1px solid #2a2533;
+  color: #b9b3c2;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  transition: background 0.2s;
+}
+.logout-btn:hover {
+  background: #1a151f;
+  color: #f4f1ea;
+}
+.main-content {
+  flex: 1;
+  padding: 30px 40px;
+  overflow-y: auto;
+}
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2a2533;
+  padding-bottom: 16px;
+  margin-bottom: 30px;
+}
+.top-header h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+.admin-badge {
+  background: #cba258;
+  color: #0a0a0a;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+.section-actions {
+  margin-bottom: 20px;
+}
+.btn-primary {
+  background: #cba258;
+  border: none;
+  color: #0a0a0a;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  transition: background 0.2s;
+}
+.btn-primary:hover {
+  background: #dbb768;
+}
+.btn-danger {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn-danger:hover {
+  background: #c0392b;
+}
+.btn-edit {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn-edit:hover {
+  background: #2980b9;
+}
+.product-list {
+  display: grid;
+  gap: 16px;
+}
+.product-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1a151f;
+  border: 1px solid #2a2533;
+  border-radius: 6px;
+  padding: 12px 18px;
+}
+.product-item .info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.product-item img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 4px;
+  background: #2a2533;
+}
+.product-item .name {
+  font-weight: 600;
+}
+.product-item .price {
+  color: #cba258;
+  font-weight: 600;
+}
+.product-item .badge {
+  font-size: 0.7rem;
+  background: #2a2533;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+.product-item .actions {
+  display: flex;
+  gap: 8px;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-content {
+  background: #1a151f;
+  border: 1px solid #2a2533;
+  border-radius: 8px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+.modal-content h2 {
+  font-family: "Bebas Neue", sans-serif;
+  margin-bottom: 20px;
+  color: #cba258;
+}
+.close-modal {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #b9b3c2;
+}
+.close-modal:hover {
+  color: #f4f1ea;
+}
+.form-group {
+  margin-bottom: 16px;
+}
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  color: #b9b3c2;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  background: #0f0c13;
+  border: 1px solid #2a2533;
+  border-radius: 4px;
+  color: #f4f1ea;
+  font-family: "Montserrat", sans-serif;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #cba258;
+}
+.form-group input[type="checkbox"] {
+  width: auto;
+}
+.order-list {
+  background: #1a151f;
+  border: 1px solid #2a2533;
+  border-radius: 6px;
+  padding: 16px;
+}
+.order-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #2a2533;
+}
+.order-item:last-child {
+  border-bottom: none;
+}
+.settings-group {
+  background: #1a151f;
+  border: 1px solid #2a2533;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.settings-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.settings-group input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 12px;
+  background: #0f0c13;
+  border: 1px solid #2a2533;
+  border-radius: 4px;
+  color: #f4f1ea;
+}
+.settings-group button {
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .admin-wrapper {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 16px;
+    border-right: none;
+    border-bottom: 1px solid #2a2533;
+  }
+  .sidebar .logo {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+  .sidebar nav ul {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .sidebar nav ul li {
+    margin-bottom: 0;
+  }
+  .logout-btn {
+    margin-top: 0;
+    margin-left: auto;
+  }
+  .main-content {
+    padding: 20px;
+  }
+  .product-item {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}

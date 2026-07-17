@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="fellaż – Checkout. Complete your order securely."
+    />
+    <meta name="theme-color" content="#0a0a0a" />
+    <title>Checkout | fellaż</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/checkout.css" />
+  </head>
+
+  <body>
+    <div class="cosmic-bg" id="cosmicBg"></div>
+
+    <div class="top-bar">
+      <span>SHARP. STREET. SMART.</span>
+      <span class="top-bar-divider">|</span>
+      <span>BUILT FOR THE REAL ONES.</span>
+    </div>
+
+    <header class="header" id="header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo"
+          ><img src="images/logo.png" width="100" height="80" alt="fellaż logo"
+        /></a>
+        <nav class="nav" id="nav">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="shop.html" class="nav-link nav-cta">Shop Now</a></li>
+          </ul>
+        </nav>
+        <div class="header-icons">
+          <a href="#" class="icon-link search-toggle" aria-label="Search"
+            ><i class="fas fa-search"></i
+          ></a>
+          <a href="cart.html" class="icon-link cart-toggle" aria-label="Cart"
+            ><i class="fas fa-shopping-bag"></i
+            ><span class="cart-count">0</span></a
+          >
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-inner">
+        <button class="mobile-menu-close" id="mobileMenuClose">&times;</button>
+        <ul class="mobile-nav-list">
+          <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+          <li><a href="about.html" class="mobile-nav-link">About</a></li>
+          <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+          <li>
+            <a href="shop.html" class="mobile-nav-link mobile-nav-cta"
+              >Shop Now</a
+            >
+          </li>
+        </ul>
+        <div class="mobile-menu-socials">
+          <a
+            href="https://wa.me/2349113010781"
+            target="_blank"
+            class="social-icon-mob"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/fellazluxurybrand"
+            target="_blank"
+            class="social-icon-mob"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="mailto:Fellaz07@gmail.com" class="social-icon-mob"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <section class="page-hero">
+      <div class="page-hero-overlay"></div>
+      <div class="container page-hero-content">
+        <p class="page-hero-eyebrow">SECURE CHECKOUT</p>
+        <h1 class="page-hero-title">Checkout</h1>
+        <p class="page-hero-subtitle">Almost there, real one.</p>
+      </div>
+    </section>
+
+    <section class="checkout-section">
+      <div class="container">
+        <div class="checkout-layout">
+          <!-- Billing & Shipping Form -->
+          <div class="checkout-form">
+            <h2>Shipping Information</h2>
+            <form id="checkoutForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fullname">Full Name *</label>
+                  <input
+                    type="text"
+                    id="fullname"
+                    required
+                    placeholder="John Doe"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    required
+                    placeholder="john@example.com"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="address">Address *</label>
+                <input
+                  type="text"
+                  id="address"
+                  required
+                  placeholder="Street, building, apartment"
+                />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="city">City *</label>
+                  <input type="text" id="city" required placeholder="Lagos" />
+                </div>
+                <div class="form-group">
+                  <label for="state">State *</label>
+                  <input type="text" id="state" required placeholder="Lagos" />
+                </div>
+                <div class="form-group">
+                  <label for="zip">Postal Code</label>
+                  <input type="text" id="zip" placeholder="100001" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Phone *</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    required
+                    placeholder="+234 XXX XXX XXX"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="country">Country *</label>
+                  <select id="country" required>
+                    <option value="">Select country</option>
+                    <option value="NG">Nigeria</option>
+                    <option value="US">United States</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="CA">Canada</option>
+                    <option value="AU">Australia</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="notes">Order Notes (optional)</label>
+                <textarea
+                  id="notes"
+                  rows="3"
+                  placeholder="Special instructions or delivery notes..."
+                ></textarea>
+              </div>
+            </form>
+          </div>
+
+          <!-- Order Summary -->
+          <div class="checkout-summary">
+            <h2>Your Order</h2>
+            <div class="order-items" id="orderItems">
+              <!-- Items will be injected -->
+              <div class="empty-cart-msg">
+                Your cart is empty. <a href="shop.html">Shop now</a>
+              </div>
+            </div>
+            <div class="summary-details">
+              <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="subtotal">₦0</span>
+              </div>
+              <div class="summary-row">
+                <span>Shipping</span>
+                <span id="shipping-cost">₦2,500</span>
+              </div>
+              <div class="summary-row total">
+                <span>Total</span>
+                <span id="total">₦0</span>
+              </div>
+            </div>
+
+            <!-- Payment Buttons -->
+            <button type="button" id="payNowBtn" class="btn-place-order">
+              <i class="fas fa-credit-card"></i> Pay with Card
+            </button>
+            <button
+              type="button"
+              id="mockOrderBtn"
+              class="btn-mock"
+              style="
+                margin-top: 10px;
+                background: transparent;
+                border: 1px solid #2a2533;
+                color: #b9b3c2;
+                padding: 10px;
+                border-radius: 4px;
+                width: 100%;
+                cursor: pointer;
+                font-family: &quot;Montserrat&quot;, sans-serif;
+              "
+            >
+              <i class="fas fa-flask"></i> Test Order (Mock)
+            </button>
+
+            <div class="secure-badge">
+              <i class="fas fa-lock"></i> Secure checkout – encrypted payment
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">fellaż</a>
+            <p class="footer-tagline">Sharp. Street. Smart.</p>
+            <p class="footer-description">
+              More than clothing. It's a mindset. A movement. Built for the real
+              ones.
+            </p>
+            <div class="footer-socials">
+              <a
+                href="https://wa.me/2349113010781"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-social-icon"
+                aria-label="WhatsApp"
+                title="Chat on WhatsApp"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/fellazluxurybrand?igsh=MTc2bnZveHRvNzV6cA=="
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-social-icon"
+                aria-label="Instagram"
+                title="Follow on Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="mailto:Fellaz07@gmail.com"
+                class="footer-social-icon"
+                aria-label="Email"
+                title="Send Email"
+              >
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a
+                href="tel:+2349113010781"
+                class="footer-social-icon"
+                aria-label="Call"
+                title="Call us"
+              >
+                <i class="fas fa-phone"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-links-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="shop.html">Shop Now</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Customer Care</h4>
+            <ul>
+              <li><a href="size-guide.html">Size Guide</a></li>
+              <li><a href="returns.html">Returns Policy</a></li>
+              <li><a href="faqs.html">FAQs</a></li>
+              <li><a href="shipping.html">Shipping Info</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Contact Us</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://wa.me/2349113010781"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-whatsapp"></i> +234 911 301 0781</a
+                >
+              </li>
+              <li>
+                <a href="tel:+2349074569733"
+                  ><i class="fas fa-phone"></i> +234 907 456 9733</a
+                >
+              </li>
+              <li>
+                <a href="mailto:Fellaz07@gmail.com"
+                  ><i class="fas fa-envelope"></i> Fellaz07@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear"></span> fellaż. All rights reserved.
+            Built for the real ones.
+          </p>
+          <p class="footer-payment">MORE PAYMENT OPTIONS</p>
+        </div>
+      </div>
+    </footer>
+    <a
+      href="https://wa.me/2349113010781"
+      target="_blank"
+      class="floating-whatsapp"
+      ><i class="fab fa-whatsapp"></i
+    ></a>
+    <div class="toast" id="toast"></div>
+
+    <script src="js/script.js"></script>
+    <!-- Paystack Inline Script -->
+    <script src="https://js.paystack.co/v2/inline.js"></script>
+    <script>
+      // =============================================
+      // 🔥 PAYSTACK CONFIGURATION
+      // =============================================
+      // Replace with your keys:
+      // - Test key: pk_test_xxxxxxxxxxxxx
+      // - Live key: pk_live_xxxxxxxxxxxxx
+      // =============================================
+      const PAYSTACK_CONFIG = {
+        // 🔥 CHANGE THIS TO YOUR PUBLIC KEY
+        publicKey: "pk_test_xxxxxxxxxxxxx", // Replace with your test or live key
+        currency: "NGN",
+        // If using test mode, use test cards:
+        // 4187427415564246 | CVV: 828 | Exp: 09/32
+      };
+
+      // =============================================
+      // PRODUCT DATABASE
+      // =============================================
+      const products = [
+        { id: 1, name: "COSMIC CREW TEE", price: 25000 },
+        { id: 2, name: "REAL ONES HOODIE", price: 25000 },
+        { id: 3, name: "CUBE TEE", price: 25000 },
+        { id: 4, name: "GRAPHIC STREETWEAR TEE", price: 20000 },
+        { id: 5, name: "INSPIRATIONAL LONG SLEEVE", price: 30000 },
+        { id: 6, name: "INSPIRATIONAL NO SLEEVE", price: 10000 },
+      ];
+
+      let cart = [];
+
+      // =============================================
+      // CART FUNCTIONS
+      // =============================================
+      function loadCart() {
+        const stored = localStorage.getItem("fellaz_cart_items");
+        if (stored) cart = JSON.parse(stored);
+        else cart = [];
+        renderOrderSummary();
+      }
+
+      function renderOrderSummary() {
+        const container = document.getElementById("orderItems");
+        const subtotalSpan = document.getElementById("subtotal");
+        const totalSpan = document.getElementById("total");
+        const shippingSpan = document.getElementById("shipping-cost");
+
+        if (!cart.length) {
+          container.innerHTML =
+            '<div class="empty-cart-msg">Your cart is empty. <a href="shop.html">Shop now</a></div>';
+          subtotalSpan.textContent = "₦0";
+          totalSpan.textContent = "₦0";
+          return;
+        }
+
+        let subtotal = 0;
+        let itemsHtml = "";
+        cart.forEach((item) => {
+          const prod = products.find((p) => p.id === item.id);
+          if (!prod) return;
+          const itemTotal = prod.price * item.quantity;
+          subtotal += itemTotal;
+          itemsHtml += `
+                    <div class="order-item">
+                        <div class="order-item-info">
+                            <span class="order-item-name">${prod.name}</span>
+                            <span class="order-item-meta">Size: ${item.size} | Qty: ${item.quantity}</span>
+                        </div>
+                        <span class="order-item-price">₦${itemTotal.toLocaleString()}</span>
+                    </div>
+                `;
+        });
+        container.innerHTML = itemsHtml;
+
+        const shipping = subtotal > 50000 ? 0 : 2500;
+        shippingSpan.textContent =
+          shipping === 0 ? "Free" : `₦${shipping.toLocaleString()}`;
+        const total = subtotal + shipping;
+        subtotalSpan.textContent = `₦${subtotal.toLocaleString()}`;
+        totalSpan.textContent = `₦${total.toLocaleString()}`;
+
+        // Store total for payment
+        const payBtn = document.getElementById("payNowBtn");
+        if (payBtn) payBtn.setAttribute("data-total", total);
+      }
+
+      function showToast(msg) {
+        const toast = document.getElementById("toast");
+        toast.textContent = msg;
+        toast.classList.add("show");
+        setTimeout(() => toast.classList.remove("show"), 3000);
+      }
+
+      function updateCartBadge() {
+        const cartData =
+          JSON.parse(localStorage.getItem("fellaz_cart_items")) || [];
+        const total = cartData.reduce((sum, i) => sum + i.quantity, 0);
+        document.querySelector(".cart-count").textContent = total;
+        localStorage.setItem("fellaz_cart", total);
+      }
+
+      // =============================================
+      // 🔥 ORDER STORAGE (for Admin Panel)
+      // =============================================
+      function saveOrder(customerData, cartItems, total, reference) {
+        const orders = JSON.parse(localStorage.getItem("fellaz_orders")) || [];
+        const order = {
+          id:
+            "FELLAZ-" +
+            Date.now().toString(36).toUpperCase() +
+            "-" +
+            Math.random().toString(36).substr(2, 4).toUpperCase(),
+          customer: customerData.fullname,
+          email: customerData.email,
+          phone: customerData.phone,
+          address: customerData.address,
+          city: customerData.city,
+          state: customerData.state,
+          country: customerData.country,
+          notes: customerData.notes || "",
+          items: cartItems.map((item) => {
+            const prod = products.find((p) => p.id === item.id);
+            return {
+              name: prod ? prod.name : "Unknown",
+              size: item.size,
+              quantity: item.quantity,
+              price: prod ? prod.price : 0,
+            };
+          }),
+          subtotal: total - (total > 50000 ? 0 : 2500),
+          shipping: total > 50000 ? 0 : 2500,
+          total: total,
+          reference: reference || "mock-" + Date.now(),
+          status: "Pending",
+          date: new Date().toISOString(),
+        };
+        orders.push(order);
+        localStorage.setItem("fellaz_orders", JSON.stringify(orders));
+        return order;
+      }
+
+      // =============================================
+      // 🔥 PAYSTACK PAYMENT FUNCTION
+      // =============================================
+      function payWithPaystack() {
+        // Validate required fields
+        const fullname = document.getElementById("fullname")?.value.trim();
+        const email = document.getElementById("email")?.value.trim();
+        const address = document.getElementById("address")?.value.trim();
+        const city = document.getElementById("city")?.value.trim();
+        const state = document.getElementById("state")?.value.trim();
+        const phone = document.getElementById("phone")?.value.trim();
+        const country = document.getElementById("country")?.value;
+        const notes = document.getElementById("notes")?.value.trim();
+
+        if (
+          !fullname ||
+          !email ||
+          !address ||
+          !city ||
+          !state ||
+          !phone ||
+          !country
+        ) {
+          showToast("⚠️ Please fill in all required fields.");
+          return;
+        }
+        if (cart.length === 0) {
+          showToast("Your cart is empty. Add items before checkout.");
+          return;
+        }
+
+        const totalAmount =
+          parseInt(
+            document.getElementById("payNowBtn").getAttribute("data-total"),
+          ) || 0;
+        const amountInKobo = totalAmount * 100;
+
+        if (amountInKobo <= 0) {
+          showToast("⚠️ Invalid order amount.");
+          return;
+        }
+
+        const txRef =
+          "FELLAZ-" + Date.now() + "-" + Math.floor(Math.random() * 1000000);
+
+        const customerData = {
+          fullname,
+          email,
+          phone,
+          address,
+          city,
+          state,
+          country,
+          notes,
+        };
+        const cartItems = cart.slice();
+
+        // 🔥 Check if Paystack is loaded
+        if (typeof PaystackPop === "undefined") {
+          showToast("⚠️ Payment service is loading. Please try again.");
+          return;
+        }
+
+        const handler = PaystackPop.setup({
+          key: PAYSTACK_CONFIG.publicKey,
+          email: email,
+          amount: amountInKobo,
+          currency: PAYSTACK_CONFIG.currency,
+          ref: txRef,
+          metadata: {
+            custom_fields: [
+              {
+                display_name: "Full Name",
+                variable_name: "fullname",
+                value: fullname,
+              },
+              { display_name: "Phone", variable_name: "phone", value: phone },
+              {
+                display_name: "Address",
+                variable_name: "address",
+                value: address,
+              },
+              { display_name: "City", variable_name: "city", value: city },
+              { display_name: "State", variable_name: "state", value: state },
+              {
+                display_name: "Country",
+                variable_name: "country",
+                value: country,
+              },
+            ],
+          },
+          callback: function (response) {
+            if (response.status === "success") {
+              // Save order
+              saveOrder(
+                customerData,
+                cartItems,
+                totalAmount,
+                response.reference,
+              );
+              // Clear cart
+              localStorage.removeItem("fellaz_cart_items");
+              localStorage.setItem("fellaz_cart", "0");
+              updateCartBadge();
+              showToast("✅ Payment successful! Order placed.");
+              setTimeout(() => {
+                window.location.href =
+                  "confirmation.html?ref=" + response.reference;
+              }, 1500);
+            } else {
+              showToast("❌ Payment failed. Please try again.");
+            }
+          },
+          onClose: function () {
+            showToast("Payment window closed. You can try again.");
+          },
+        });
+        handler.openIframe();
+      }
+
+      // =============================================
+      // 🔥 MOCK ORDER (for testing without Paystack)
+      // =============================================
+      function placeMockOrder() {
+        const fullname = document.getElementById("fullname")?.value.trim();
+        const email = document.getElementById("email")?.value.trim();
+        const address = document.getElementById("address")?.value.trim();
+        const city = document.getElementById("city")?.value.trim();
+        const state = document.getElementById("state")?.value.trim();
+        const phone = document.getElementById("phone")?.value.trim();
+        const country = document.getElementById("country")?.value;
+        const notes = document.getElementById("notes")?.value.trim();
+
+        if (
+          !fullname ||
+          !email ||
+          !address ||
+          !city ||
+          !state ||
+          !phone ||
+          !country
+        ) {
+          showToast("⚠️ Please fill in all required fields.");
+          return;
+        }
+        if (cart.length === 0) {
+          showToast("Your cart is empty. Add items before checkout.");
+          return;
+        }
+
+        const totalAmount =
+          parseInt(
+            document.getElementById("payNowBtn").getAttribute("data-total"),
+          ) || 0;
+        const customerData = {
+          fullname,
+          email,
+          phone,
+          address,
+          city,
+          state,
+          country,
+          notes,
+        };
+        const cartItems = cart.slice();
+
+        // Save mock order
+        saveOrder(customerData, cartItems, totalAmount, "mock-" + Date.now());
+        localStorage.removeItem("fellaz_cart_items");
+        localStorage.setItem("fellaz_cart", "0");
+        updateCartBadge();
+        showToast("✅ Test order placed! (Mock)");
+        setTimeout(() => {
+          window.location.href = "confirmation.html";
+        }, 1500);
+      }
+
+      // =============================================
+      // EVENT LISTENERS
+      // =============================================
+      document
+        .getElementById("payNowBtn")
+        ?.addEventListener("click", payWithPaystack);
+      document
+        .getElementById("mockOrderBtn")
+        ?.addEventListener("click", placeMockOrder);
+
+      // =============================================
+      // INITIALIZE
+      // =============================================
+      loadCart();
+      updateCartBadge();
+      window.addEventListener("storage", () => {
+        loadCart();
+        updateCartBadge();
+      });
+    </script>
+  </body>
+</html>

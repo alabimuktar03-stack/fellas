@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="fellaż – Premium streetwear. View product details, select size, and add to cart.">
+    <meta name="theme-color" content="#0a0a0a">
+    <title>Product | fellaż</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/product.css">
+</head>
+
+<body>
+    <!-- Cosmic Background -->
+    <div class="cosmic-bg" id="cosmicBg"></div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <span>SHARP. STREET. SMART.</span>
+        <span class="top-bar-divider">|</span>
+        <span>BUILT FOR THE REAL ONES.</span>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" width="100" height="80" alt="fellaż logo">
+            </a>
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="shop.html" class="nav-link nav-cta">Shop Now</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" class="icon-link search-toggle" aria-label="Search"><i class="fas fa-search"></i></a>
+                <a href="cart.html" class="icon-link cart-toggle" aria-label="Cart"><i
+                        class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+            <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">&times;</button>
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+                <li><a href="about.html" class="mobile-nav-link">About</a></li>
+                <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+                <li><a href="shop.html" class="mobile-nav-link mobile-nav-cta">Shop Now</a></li>
+            </ul>
+            <div class="mobile-menu-socials">
+                <a href="https://wa.me/2349113010781" target="_blank" class="social-icon-mob" aria-label="WhatsApp"><i
+                        class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/fellazluxurybrand?igsh=MTc2bnZveHRvNzV6cA==" target="_blank"
+                    class="social-icon-mob" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:Fellaz07@gmail.com" class="social-icon-mob" aria-label="Email"><i
+                        class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail-section reveal">
+        <div class="container">
+            <div class="product-detail-grid" id="productDetail">
+                <div class="loading">Loading product...</div>
+            </div>
+
+            <div class="related-products">
+                <h2 class="related-title">YOU MAY ALSO LIKE</h2>
+                <div class="related-grid" id="relatedGrid"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">fellaż</a>
+                    <p class="footer-tagline">Sharp. Street. Smart.</p>
+                    <p class="footer-description">More than clothing. It's a mindset. A movement. Built for the real
+                        ones.</p>
+                    <div class="footer-socials">
+                        <a href="https://wa.me/2349113010781" target="_blank" class="footer-social-icon"
+                            aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/fellazluxurybrand?igsh=MTc2bnZveHRvNzV6cA==" target="_blank"
+                            class="footer-social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:Fellaz07@gmail.com" class="footer-social-icon" aria-label="Email"><i
+                                class="fas fa-envelope"></i></a>
+                        <a href="tel:+2349113010781" class="footer-social-icon" aria-label="Call"><i
+                                class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="shop.html">Shop Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="size-guide.html">Size Guide</a></li>
+                        <li><a href="returns.html">Returns Policy</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="shipping.html">Shipping Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="https://wa.me/2349113010781" target="_blank"><i class="fab fa-whatsapp"></i> +234
+                                911 301 0781</a></li>
+                        <li><a href="tel:+2349074569733"><i class="fas fa-phone"></i> +234 907 456 9733</a></li>
+                        <li><a href="mailto:Fellaz07@gmail.com"><i class="fas fa-envelope"></i> Fellaz07@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> fellaż. All rights reserved. Built for the real ones.</p>
+                <p class="footer-payment">MORE PAYMENT OPTIONS</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/2349113010781" target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp"><i
+            class="fab fa-whatsapp"></i></a>
+    <div class="toast" id="toast"></div>
+
+    <script src="js/script.js"></script>
+    <script>
+        const products = [
+            { id: 1, name: "COSMIC CREW TEE", price: 25000, category: "tee", image: "images/Graphic Streetwear T-Shirt.jpeg", badge: "HOT", inStock: true, description: "The Cosmic Crew Tee brings galactic energy to your everyday look. Premium cotton blend with a bold graphic that demands attention. Designed for those who move different.", features: ["100% premium cotton", "Screen printed graphic", "Relaxed fit", "Ribbed crew neck", "Pre-shrunk fabric"] },
+            { id: 2, name: "REAL ONES HOODIE", price: 25000, category: "hoodie", image: "images/real-ones-hoodie.jpeg", badge: "NEW", inStock: false, description: "The Real Ones Hoodie is for the select few. Heavyweight fleece with embroidered details.", features: ["80% cotton, 20% polyester", "Kangaroo pocket", "Drawstring hood", "Embroidered logo", "Oversized fit"] },
+            { id: 3, name: "CUBE TEE", price: 25000, category: "tee", image: "images/Cube-tee.jpeg", badge: "NEW", inStock: true, description: "Geometric precision meets street energy.", features: ["100% combed cotton", "Cube graphic print", "Regular fit", "Reinforced stitching"] },
+            { id: 4, name: "GRAPHIC STREETWEAR TEE", price: 20000, category: "tee", image: "images/cosmic-crew-tee.jpeg", badge: "", inStock: true, description: "Bold graphics, premium feel.", features: ["100% cotton", "Vibrant graphic print", "Classic fit", "Durable fabric"] },
+            { id: 5, name: "INSPIRATIONAL LONG SLEEVE", price: 30000, category: "longsleeve", image: "images/Inspirational Graphic Long-Sleeve Tee.jpeg", badge: "", inStock: true, description: "Inspiration meets comfort.", features: ["Cotton-poly blend", "Ribbed cuffs", "Long sleeve", "Inspirational quote print"] },
+            { id: 6, name: "INSPIRATIONAL NO SLEEVE", price: 10000, category: "sleeveless", image: "images/No-sleeve.jpg", badge: "", inStock: true, description: "Summer ready.", features: ["100% cotton", "Sleeveless cut", "Relaxed armholes", "Lightweight fabric"] }
+        ];
+
+        let selectedSize = 'M';
+        let quantity = 1;
+
+        function getProductIdFromURL() { return parseInt(new URLSearchParams(window.location.search).get('id')) || 1; }
+        function getProduct() { return products.find(p => p.id === getProductIdFromURL()) || products[0]; }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2500);
+        }
+
+        function updateCartBadge() {
+            const cart = JSON.parse(localStorage.getItem('fellaz_cart_items')) || [];
+            const total = cart.reduce((sum, i) => sum + i.quantity, 0);
+            document.querySelector('.cart-count').textContent = total;
+            localStorage.setItem('fellaz_cart', total);
+        }
+
+        function addToCart(product, size, qty) {
+            let cart = JSON.parse(localStorage.getItem('fellaz_cart_items')) || [];
+            const existing = cart.findIndex(i => i.id === product.id && i.size === size);
+            if (existing !== -1) cart[existing].quantity += qty;
+            else cart.push({ id: product.id, size: size, quantity: qty });
+            localStorage.setItem('fellaz_cart_items', JSON.stringify(cart));
+            updateCartBadge();
+            showToast(`🔥 ${product.name} (${size}) × ${qty} added to bag!`);
+        }
+
+        function renderProductDetail() {
+            const product = getProduct();
+            const container = document.getElementById('productDetail');
+            container.innerHTML = `
+                <div class="product-gallery">
+                    <div class="main-image"><img src="${product.image}" alt="${product.name}" onerror="this.src='https://placehold.co/600x600/1a151f/cba258?text=fellaż'"></div>
+                </div>
+                <div class="product-info-detail">
+                    ${product.badge ? `<div class="product-badge ${product.badge === 'HOT' ? 'badge-hot' : 'badge-new'}">${product.badge}</div>` : ''}
+                    <h1 class="product-title">${product.name}</h1>
+                    <p class="product-price">₦${product.price.toLocaleString()}</p>
+                    <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span>(48 reviews)</span></div>
+                    <p class="product-description">${product.description}</p>
+                    <div class="product-features-list"><h3>Features</h3><ul>${product.features.map(f => `<li><i class="fas fa-check"></i> ${f}</li>`).join('')}</ul></div>
+                    <div class="size-selector"><h3>Select Size</h3><div class="size-options">${['S', 'M', 'L', 'XL', 'XXL'].map(s => `<button class="size-btn ${s === selectedSize ? 'active' : ''}" data-size="${s}">${s}</button>`).join('')}</div><a href="size-guide.html" class="size-guide-link"><i class="fas fa-ruler"></i> Size Guide</a></div>
+                    <div class="quantity-selector"><h3>Quantity</h3><div class="quantity-control"><button class="qty-btn" id="qtyMinus">-</button><input type="number" id="quantity" value="1" min="1" max="10" readonly><button class="qty-btn" id="qtyPlus">+</button></div></div>
+                    ${product.inStock ? `<button class="btn-add-to-cart" id="addToCartBtn"><i class="fas fa-shopping-bag"></i> Add to Cart</button><button class="btn-buy-now" id="buyNowBtn"><i class="fas fa-bolt"></i> Buy Now</button>` : `<button class="btn-sold-out-page" disabled><i class="fas fa-times"></i> Sold Out</button>`}
+                    <div class="product-meta"><div class="meta-item"><i class="fas fa-truck"></i><span>Free shipping on orders over ₦50,000</span></div><div class="meta-item"><i class="fas fa-undo"></i><span>14-day easy returns</span></div><div class="meta-item"><i class="fas fa-shield-alt"></i><span>Secure checkout</span></div></div>
+                </div>
+            `;
+            document.querySelectorAll('.size-btn').forEach(btn => { btn.addEventListener('click', () => { document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); selectedSize = btn.dataset.size; }); });
+            const qtyInput = document.getElementById('quantity');
+            document.getElementById('qtyMinus')?.addEventListener('click', () => { if (quantity > 1) { quantity--; qtyInput.value = quantity; } });
+            document.getElementById('qtyPlus')?.addEventListener('click', () => { if (quantity < 10) { quantity++; qtyInput.value = quantity; } });
+            document.getElementById('addToCartBtn')?.addEventListener('click', () => { if (product.inStock) addToCart(product, selectedSize, quantity); });
+            document.getElementById('buyNowBtn')?.addEventListener('click', () => { if (product.inStock) { addToCart(product, selectedSize, quantity); showToast('🛒 Redirecting to checkout...'); setTimeout(() => window.location.href = 'cart.html', 800); } });
+        }
+
+        function renderRelated() {
+            const product = getProduct();
+            const related = products.filter(p => p.id !== product.id && p.inStock).slice(0, 3);
+            const container = document.getElementById('relatedGrid');
+            if (!related.length) { container.innerHTML = '<p style="text-align:center; color:var(--text-secondary);">No related products.</p>'; return; }
+            container.innerHTML = related.map(p => `<div class="related-card" onclick="window.location.href='product.html?id=${p.id}'"><div class="related-image"><img src="${p.image}" onerror="this.src='https://placehold.co/300x300/1a151f/cba258?text=fellaż'"></div><div class="related-info"><h3>${p.name}</h3><p class="related-price">₦${p.price.toLocaleString()}</p><button class="related-btn">View Product</button></div></div>`).join('');
+        }
+
+        renderProductDetail();
+        renderRelated();
+        updateCartBadge();
+        window.addEventListener('storage', updateCartBadge);
+    </script>
+</body>
+
+</html>

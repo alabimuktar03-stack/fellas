@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login | fellaż</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #0a0710;
+        color: #f4f1ea;
+        font-family: "Montserrat", sans-serif;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(ellipse at 50% 0%, #1a0f2e 0%, #07050a 60%);
+      }
+      .login-card {
+        background: #1a151f;
+        border: 1px solid #2a2533;
+        border-radius: 12px;
+        padding: 40px 32px;
+        width: 100%;
+        max-width: 400px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+      }
+      .login-card h1 {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        text-align: center;
+        color: #cba258;
+        margin-bottom: 8px;
+      }
+      .login-card p {
+        color: #b9b3c2;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 0.9rem;
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      .form-group label {
+        display: block;
+        font-weight: 600;
+        font-size: 0.85rem;
+        margin-bottom: 6px;
+        color: #b9b3c2;
+      }
+      .form-group input {
+        width: 100%;
+        padding: 12px 14px;
+        background: #0f0c13;
+        border: 1px solid #2a2533;
+        border-radius: 6px;
+        color: #f4f1ea;
+        font-family: "Montserrat", sans-serif;
+      }
+      .form-group input:focus {
+        outline: none;
+        border-color: #cba258;
+      }
+      .btn-login {
+        width: 100%;
+        padding: 14px;
+        background: #cba258;
+        border: none;
+        border-radius: 6px;
+        font-weight: 700;
+        font-size: 1rem;
+        color: #0a0a0a;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .btn-login:hover {
+        background: #dbb768;
+      }
+      .error-msg {
+        color: #e74c3c;
+        font-size: 0.85rem;
+        margin-top: 12px;
+        text-align: center;
+        display: none;
+      }
+      .footer-text {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 0.75rem;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-card">
+      <h1>🔐 fellaż Admin</h1>
+      <p>Enter password to access dashboard</p>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter admin password"
+            required
+          />
+        </div>
+        <button type="submit" class="btn-login">Login</button>
+        <div id="errorMsg" class="error-msg">
+          Incorrect password. Try again.
+        </div>
+      </form>
+      <div class="footer-text">Default password: <strong>admin123</strong></div>
+    </div>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const password = document.getElementById("password").value.trim();
+          const correct = localStorage.getItem("admin_password") || "admin123";
+          if (password === correct) {
+            sessionStorage.setItem("admin_logged_in", "true");
+            window.location.href = "admin-dashboard.html";
+          } else {
+            document.getElementById("errorMsg").style.display = "block";
+          }
+        });
+    </script>
+  </body>
+</html>

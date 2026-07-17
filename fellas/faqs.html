@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="fellaż FAQs – Find answers to common questions about orders, shipping, returns, and more."
+    />
+    <meta name="theme-color" content="#0a0a0a" />
+    <title>FAQs | fellaż</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/faqs.css" />
+  </head>
+
+  <body>
+    <!-- Cosmic Background -->
+    <div class="cosmic-bg" id="cosmicBg"></div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <span>SHARP. STREET. SMART.</span>
+      <span class="top-bar-divider">|</span>
+      <span>BUILT FOR THE REAL ONES.</span>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <img
+            src="images/logo.png"
+            width="100"
+            height="80"
+            alt="fellaż logo"
+          />
+        </a>
+        <nav class="nav" id="nav">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="shop.html" class="nav-link nav-cta">Shop Now</a></li>
+          </ul>
+        </nav>
+        <div class="header-icons">
+          <a href="#" class="icon-link search-toggle" aria-label="Search"
+            ><i class="fas fa-search"></i
+          ></a>
+          <a href="cart.html" class="icon-link cart-toggle" aria-label="Cart"
+            ><i class="fas fa-shopping-bag"></i
+            ><span class="cart-count">0</span></a
+          >
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-inner">
+        <button
+          class="mobile-menu-close"
+          id="mobileMenuClose"
+          aria-label="Close menu"
+        >
+          &times;
+        </button>
+        <ul class="mobile-nav-list">
+          <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+          <li><a href="about.html" class="mobile-nav-link">About</a></li>
+          <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+          <li>
+            <a href="shop.html" class="mobile-nav-link mobile-nav-cta"
+              >Shop Now</a
+            >
+          </li>
+        </ul>
+        <div class="mobile-menu-socials">
+          <a
+            href="https://wa.me/2349113010781"
+            target="_blank"
+            class="social-icon-mob"
+            aria-label="WhatsApp"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/fellazluxurybrand?igsh=MTc2bnZveHRvNzV6cA=="
+            target="_blank"
+            class="social-icon-mob"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="mailto:Fellaz07@gmail.com"
+            class="social-icon-mob"
+            aria-label="Email"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="page-hero-overlay"></div>
+      <div class="container page-hero-content">
+        <p class="page-hero-eyebrow">GOT QUESTIONS?</p>
+        <h1 class="page-hero-title">Frequently Asked Questions</h1>
+        <p class="page-hero-subtitle">
+          Everything you need to know about fellaż.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="faqs-section reveal">
+      <div class="container">
+        <!-- Category Tabs -->
+        <div class="faq-tabs">
+          <button class="tab-btn active" data-category="all">All</button>
+          <button class="tab-btn" data-category="orders">Orders</button>
+          <button class="tab-btn" data-category="shipping">Shipping</button>
+          <button class="tab-btn" data-category="returns">Returns</button>
+          <button class="tab-btn" data-category="products">Products</button>
+          <button class="tab-btn" data-category="payment">Payment</button>
+        </div>
+
+        <!-- FAQ Accordion -->
+        <div class="faq-accordion">
+          <!-- Orders Category -->
+          <div class="faq-category" data-category="orders">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How do I track my order?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Once your order ships, you'll receive a confirmation email
+                  with a tracking number. You can also log into your account (if
+                  you created one) and view your order status. Tracking updates
+                  may take 24-48 hours to appear.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Can I cancel or change my order?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  We process orders quickly. If you need to cancel or modify
+                  your order, contact us within 2 hours of placing it. After
+                  that, your order may have already been processed for shipping.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>I received a wrong/damaged item. What do I do?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  We're sorry! Contact our support team within 48 hours of
+                  delivery with photos of the item and your order number. We'll
+                  arrange a replacement or refund immediately.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shipping Category -->
+          <div class="faq-category" data-category="shipping">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How long does shipping take?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  <strong>Nigeria:</strong> 3-7 business days<br /><strong
+                    >International:</strong
+                  >
+                  10-20 business days depending on your location. Customs
+                  clearance may add extra time.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How much is shipping?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Shipping costs are calculated at checkout based on your
+                  location and order weight. Free shipping on orders over
+                  ₦50,000 within Nigeria.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Do you ship worldwide?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Yes! fellaż ships to most countries worldwide. Shipping rates
+                  and delivery times vary by destination. Customs fees may apply
+                  and are the customer's responsibility.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Returns Category -->
+          <div class="faq-category" data-category="returns">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>What is your return policy?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  We accept returns within 14 days of delivery. Items must be
+                  unworn, unwashed, with all tags attached. We offer store
+                  credit or size exchange. Final sale items are not returnable.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How do I start a return?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Contact us via email at
+                  <a href="mailto:Fellaz07@gmail.com">Fellaz07@gmail.com</a> or
+                  WhatsApp with your order number. We'll provide return
+                  instructions within 24 hours.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Who pays for return shipping?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Customers cover return shipping costs unless the item is
+                  defective or we made an error. We recommend using a trackable
+                  shipping service.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Products Category -->
+          <div class="faq-category" data-category="products">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How do fellaż clothes fit?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Our tees and tops have a relaxed, true-to-size streetwear fit.
+                  Hoodies are slightly oversized. Check our
+                  <a href="size-guide.html">Size Guide</a> for detailed
+                  measurements.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>What materials do you use?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  We use premium cotton blends, heavyweight fleece for hoodies,
+                  and durable fabrics that last. All our products are designed
+                  for comfort and longevity.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How do I care for my fellaż pieces?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Machine wash cold inside out, tumble dry low, or hang dry. Do
+                  not bleach or dry clean. This keeps the graphics and fabric
+                  fresh longer.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Payment Category -->
+          <div class="faq-category" data-category="payment">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>What payment methods do you accept?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  We accept credit/debit cards (Visa, Mastercard), bank
+                  transfers, and mobile money. Secure payment processing via
+                  Paystack.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Is my payment information secure?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Absolutely. We use industry-standard SSL encryption and never
+                  store your full payment details. All transactions are
+                  processed through secure gateways.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Can I use multiple discount codes?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Only one discount code can be applied per order. Some items
+                  may be excluded from promotions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Still need help -->
+        <div class="still-need-help">
+          <i class="fas fa-headset"></i>
+          <h3>Still have questions?</h3>
+          <p>We're here for the real ones. Reach out to our support team.</p>
+          <div class="help-buttons">
+            <a href="contact.html" class="btn-help">Contact Us</a>
+            <a
+              href="https://wa.me/2349113010781"
+              target="_blank"
+              class="btn-help whatsapp"
+              ><i class="fab fa-whatsapp"></i> WhatsApp</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">fellaż</a>
+            <p class="footer-tagline">Sharp. Street. Smart.</p>
+            <p class="footer-description">
+              More than clothing. It's a mindset. A movement. Built for the real
+              ones.
+            </p>
+            <div class="footer-socials">
+              <a
+                href="https://wa.me/2349113010781"
+                target="_blank"
+                class="footer-social-icon"
+                aria-label="WhatsApp"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/fellazluxurybrand?igsh=MTc2bnZveHRvNzV6cA=="
+                target="_blank"
+                class="footer-social-icon"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="mailto:Fellaz07@gmail.com"
+                class="footer-social-icon"
+                aria-label="Email"
+                ><i class="fas fa-envelope"></i
+              ></a>
+              <a
+                href="tel:+2349113010781"
+                class="footer-social-icon"
+                aria-label="Call"
+                ><i class="fas fa-phone"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-links-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="shop.html">Shop Now</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Customer Care</h4>
+            <ul>
+              <li><a href="size-guide.html">Size Guide</a></li>
+              <li><a href="returns.html">Returns Policy</a></li>
+              <li><a href="faqs.html">FAQs</a></li>
+              <li><a href="shipping.html">Shipping Info</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Contact Us</h4>
+            <ul>
+              <li>
+                <a href="https://wa.me/2349113010781" target="_blank"
+                  ><i class="fab fa-whatsapp"></i> +234 911 301 0781</a
+                >
+              </li>
+              <li>
+                <a href="tel:+2349074569733"
+                  ><i class="fas fa-phone"></i> +234 907 456 9733</a
+                >
+              </li>
+              <li>
+                <a href="mailto:Fellaz07@gmail.com"
+                  ><i class="fas fa-envelope"></i> Fellaz07@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear"></span> fellaż. All rights reserved.
+            Built for the real ones.
+          </p>
+          <p class="footer-payment">MORE PAYMENT OPTIONS</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a
+      href="https://wa.me/2349113010781"
+      target="_blank"
+      class="floating-whatsapp"
+      aria-label="Chat on WhatsApp"
+      ><i class="fab fa-whatsapp"></i
+    ></a>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script src="js/script.js"></script>
+    <script>
+      // FAQ Accordion functionality
+      document.querySelectorAll(".faq-question").forEach((question) => {
+        question.addEventListener("click", () => {
+          const faqItem = question.parentElement;
+          const isActive = faqItem.classList.contains("active");
+
+          // Close all other items
+          document.querySelectorAll(".faq-item").forEach((item) => {
+            item.classList.remove("active");
+          });
+
+          // Toggle current item
+          if (!isActive) {
+            faqItem.classList.add("active");
+          }
+        });
+      });
+
+      // Tab filtering functionality
+      const tabBtns = document.querySelectorAll(".tab-btn");
+      const faqCategories = document.querySelectorAll(".faq-category");
+
+      tabBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          // Update active tab
+          tabBtns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const category = btn.dataset.category;
+
+          // Show/hide categories
+          faqCategories.forEach((cat) => {
+            if (category === "all" || cat.dataset.category === category) {
+              cat.style.display = "block";
+            } else {
+              cat.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

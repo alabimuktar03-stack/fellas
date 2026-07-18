@@ -204,41 +204,45 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Countdown (only if elements exist)
-  const daysEl = getEl("days"),
-    hoursEl = getEl("hours"),
-    minutesEl = getEl("minutes"),
-    secondsEl = getEl("seconds");
-  if (daysEl && hoursEl && minutesEl && secondsEl) {
+  // ---------- COUNTDOWN TIMER (FIXED) ----------
+  let countdownInterval; // Declare outside
+
+  function updateCountdown() {
     const targetDate = new Date(2026, 4, 30, 18, 0, 0);
-    function updateCountdown() {
-      const distance = targetDate - new Date();
-      if (distance < 0) {
-        daysEl.textContent =
-          hoursEl.textContent =
-          minutesEl.textContent =
-          secondsEl.textContent =
-            "00";
-        clearInterval(countdownInterval);
-        showToast("🚀 The drop is live!");
-        return;
-      }
-      daysEl.textContent = Math.floor(distance / 86400000)
-        .toString()
-        .padStart(2, "0");
-      hoursEl.textContent = Math.floor((distance % 86400000) / 3600000)
-        .toString()
-        .padStart(2, "0");
-      minutesEl.textContent = Math.floor((distance % 3600000) / 60000)
-        .toString()
-        .padStart(2, "0");
-      secondsEl.textContent = Math.floor((distance % 60000) / 1000)
-        .toString()
-        .padStart(2, "0");
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    const daysEl = document.getElementById("days");
+    const hoursEl = document.getElementById("hours");
+    const minutesEl = document.getElementById("minutes");
+    const secondsEl = document.getElementById("seconds");
+
+    if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+
+    if (distance < 0) {
+      daysEl.textContent = "00";
+      hoursEl.textContent = "00";
+      minutesEl.textContent = "00";
+      secondsEl.textContent = "00";
+      clearInterval(countdownInterval);
+      showToast("🚀 The drop is live!");
+      return;
     }
-    updateCountdown();
-    const countdownInterval = setInterval(updateCountdown, 1000);
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % 86400000) / 3600000);
+    const minutes = Math.floor((distance % 3600000) / 60000);
+    const seconds = Math.floor((distance % 60000) / 1000);
+
+    daysEl.textContent = days.toString().padStart(2, "0");
+    hoursEl.textContent = hours.toString().padStart(2, "0");
+    minutesEl.textContent = minutes.toString().padStart(2, "0");
+    secondsEl.textContent = seconds.toString().padStart(2, "0");
   }
 
+  // Call it once and then set interval
+  updateCountdown();
+  countdownInterval = setInterval(updateCountdown, 1000);
   // Newsletter (only if form exists)
   const newsletterForm = getSel("#newsletterForm");
   const newsletterEmail = getSel("#newsletterEmail");

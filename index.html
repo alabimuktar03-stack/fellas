@@ -1,433 +1,646 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="fellaż - Sharp. Street. Smart. Built for the real ones. Premium streetwear brand.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="fellaż - Sharp. Street. Smart. Built for the real ones. Premium streetwear brand."
+    />
     <title>fellaż | Sharp. Street. Smart.</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-<body>
+  <body>
     <!-- 🔥 ANIMATED COSMIC BACKGROUND -->
     <div class="cosmic-bg" id="cosmicBg"></div>
 
     <!-- 🔥 TOP BAR -->
     <div class="top-bar">
-        <span>SHARP. STREET. SMART.</span>
-        <span class="top-bar-divider">|</span>
-        <span>BUILT FOR THE REAL ONES.</span>
+      <span>SHARP. STREET. SMART.</span>
+      <span class="top-bar-divider">|</span>
+      <span>BUILT FOR THE REAL ONES.</span>
     </div>
 
     <!-- 🔥 HEADER / NAVIGATION -->
     <header class="header" id="header">
-        <div class="container header-inner">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" width="100" height="50" alt="fellaż logo">
-            </a>
-            <nav class="nav" id="nav">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li><a href="shop.html" class="nav-link nav-cta">Shop Now</a></li>
-                </ul>
-            </nav>
-            <div class="header-icons">
-                <a href="#" class="icon-link search-toggle" aria-label="Search"><i class="fas fa-search"></i></a>
-                <a href="cart.html" class="icon-link cart-toggle" aria-label="Cart"><i
-                        class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
-                <button class="hamburger" id="hamburger" aria-label="Menu">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <img
+            src="images/logo.png"
+            width="100"
+            height="50"
+            alt="fellaż logo"
+          />
+        </a>
+        <nav class="nav" id="nav">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="shop.html" class="nav-link nav-cta">Shop Now</a></li>
+          </ul>
+        </nav>
+        <div class="header-icons">
+          <a href="#" class="icon-link search-toggle" aria-label="Search"
+            ><i class="fas fa-search"></i
+          ></a>
+          <a href="cart.html" class="icon-link cart-toggle" aria-label="Cart"
+            ><i class="fas fa-shopping-bag"></i
+            ><span class="cart-count">0</span></a
+          >
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
         </div>
+      </div>
     </header>
 
     <!-- 🔥 MOBILE MENU OVERLAY -->
     <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-inner">
-            <button class="mobile-menu-close" id="mobileMenuClose">&times;</button>
-            <ul class="mobile-nav-list">
-                <li><a href="index.html" class="mobile-nav-link">Home</a></li>
-                <li><a href="about.html" class="mobile-nav-link">About</a></li>
-                <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
-                <li><a href="shop.html" class="mobile-nav-link mobile-nav-cta">Shop Now</a></li>
-            </ul>
-            <div class="mobile-menu-socials">
-                <a href="https://wa.me/2349113010781" target="_blank" rel="noopener noreferrer" class="social-icon-mob"
-                    aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://www.instagram.com/fellazluxurybrand?igsh=MTc2bnZveHRvNzV6cA==" target="_blank"
-                    rel="noopener noreferrer" class="social-icon-mob" aria-label="Instagram"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="mailto:Fellaz07@gmail.com" class="social-icon-mob" aria-label="Email"><i
-                        class="fas fa-envelope"></i></a>
-            </div>
+      <div class="mobile-menu-inner">
+        <button class="mobile-menu-close" id="mobileMenuClose">&times;</button>
+        <ul class="mobile-nav-list">
+          <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+          <li><a href="about.html" class="mobile-nav-link">About</a></li>
+          <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+          <li>
+            <a href="shop.html" class="mobile-nav-link mobile-nav-cta"
+              >Shop Now</a
+            >
+          </li>
+        </ul>
+        <div class="mobile-menu-socials">
+          <a
+            href="https://wa.me/2349113010781"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon-mob"
+            aria-label="WhatsApp"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/fellazluxurybrand?igsh=MTc2bnZveHRvNzV6cA=="
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon-mob"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="mailto:Fellaz07@gmail.com"
+            class="social-icon-mob"
+            aria-label="Email"
+            ><i class="fas fa-envelope"></i
+          ></a>
         </div>
+      </div>
     </div>
 
     <!-- 🔥 HERO SECTION -->
     <section class="hero" id="home">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <p class="hero-eyebrow">SHARP. STREET. SMART.</p>
-            <h1 class="hero-title">
-                <span class="hero-brand">Fellaż</span>
-            </h1>
-            <p class="hero-subtitle">BUILT FOR THE REAL ONES.</p>
-            <p class="hero-description">Premium streetwear for those who move different. Cosmic energy, street DNA.</p>
-            <div class="hero-buttons">
-                <a href="#shop" class="btn btn-primary pulse-btn">SHOP NOW</a>
-                <a href="#latest-drop" class="btn btn-outline">LATEST DROP</a>
-            </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">SHARP. STREET. SMART.</p>
+        <h1 class="hero-title">
+          <span class="hero-brand">Fellaż</span>
+        </h1>
+        <p class="hero-subtitle">BUILT FOR THE REAL ONES.</p>
+        <p class="hero-description">
+          Premium streetwear for those who move different. Cosmic energy, street
+          DNA.
+        </p>
+        <div class="hero-buttons">
+          <a href="#shop" class="btn btn-primary pulse-btn">SHOP NOW</a>
+          <a href="#latest-drop" class="btn btn-outline">LATEST DROP</a>
         </div>
-        <div class="hero-scroll-indicator">
-            <span>Scroll</span>
-            <i class="fas fa-chevron-down"></i>
-        </div>
+      </div>
+      <div class="hero-scroll-indicator">
+        <span>Scroll</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
     </section>
 
     <!-- 🔥 FEATURED DROP SECTION -->
     <section class="featured-section" id="shop">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">FEATURED DROP</h2>
-                <div class="section-line"></div>
-                <p class="section-subtitle">Limited pieces. Maximum impact.</p>
-            </div>
-            <div class="product-grid">
-                <!-- Product 1 -->
-                <div class="product-card" data-id="1">
-                    <div class="product-badge">HOT</div>
-                    <div class="product-image-wrapper">
-                        <img src="images/Graphic Streetwear T-Shirt.jpeg" alt="COSMIC CREW TEE" class="product-image"
-                            loading="lazy"
-                            onerror="this.style.background='linear-gradient(135deg, #1a1a2e, #2d1b3d)'; this.alt='Image Placeholder';">
-                        <div class="product-overlay-actions">
-                            <button class="quick-view-btn" aria-label="Quick view"><i class="fas fa-eye"></i></button>
-                            <button class="quick-add-btn" aria-label="Add to cart"><i
-                                    class="fas fa-shopping-bag"></i></button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">COSMIC CREW TEE</h3>
-                        <p class="product-price">₦25,000</p>
-                        <div class="product-features">
-                            <span><i class="fas fa-star"></i> Premium Quality</span>
-                            <span><i class="fas fa-undo"></i> Easy Returns</span>
-                            <span><i class="fas fa-globe-africa"></i> Worldwide Shipping</span>
-                        </div>
-                        <button class="btn btn-product add-to-cart" data-id="1" data-name="COSMIC CREW TEE"
-                            data-price="25000">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!-- Product 2 -->
-                <div class="product-card" data-id="2">
-                    <div class="product-badge badge">NEW</div>
-                    <div class="product-image-wrapper">
-                        <img src="images/real-ones-hoodie.jpeg" alt="Real Ones Hoodie" class="product-image"
-                            loading="lazy"
-                            onerror="this.style.background='linear-gradient(135deg, #1a1a2e, #3d1b2d)'; this.alt='Image Placeholder';">
-                        <div class="product-overlay-actions">
-                            <button class="quick-view-btn" aria-label="Quick view"><i class="fas fa-eye"></i></button>
-                            <button class="quick-add-btn disabled" aria-label="Sold out" disabled><i
-                                    class="fas fa-times"></i></button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">REAL ONES HOODIE</h3>
-                        <p class="product-price">₦25,000</p>
-                        <div class="product-features">
-                            <span><i class="fas fa-star"></i> Premium Quality</span>
-                            <span><i class="fas fa-undo"></i> Easy Returns</span>
-                            <span><i class="fas fa-globe-africa"></i> Worldwide Shipping</span>
-                        </div>
-                        <button class="btn btn-product btn-sold-out" disabled>Sold Out</button>
-                    </div>
-                </div>
-
-                <!-- Product 3 -->
-                <div class="product-card" data-id="3">
-                    <div class="product-badge badge-new">NEW</div>
-                    <div class="product-image-wrapper">
-                        <img src="images/Cube-tee.jpeg" alt="Cube Tee" class="product-image" loading="lazy"
-                            onerror="this.style.background='linear-gradient(135deg, #1a1a2e, #1b3d2d)'; this.alt='Image Placeholder';">
-                        <div class="product-overlay-actions">
-                            <button class="quick-view-btn" aria-label="Quick view"><i class="fas fa-eye"></i></button>
-                            <button class="quick-add-btn" aria-label="Add to cart"><i
-                                    class="fas fa-shopping-bag"></i></button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">CUBE TEE</h3>
-                        <p class="product-price">₦25,000</p>
-                        <div class="product-features">
-                            <span><i class="fas fa-star"></i> Premium Quality</span>
-                            <span><i class="fas fa-undo"></i> Easy Returns</span>
-                            <span><i class="fas fa-globe-africa"></i> Worldwide Shipping</span>
-                        </div>
-                        <button class="btn btn-product add-to-cart" data-id="3" data-name="CUBE TEE"
-                            data-price="25000">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!-- Product 4 -->
-                <div class="product-card" data-id="4">
-                    <div class="product-badge badge-new">NEW</div>
-                    <div class="product-image-wrapper">
-                        <img src="images/cosmic-crew-tee.jpeg" alt="graphic streetwear T-Shirt" class="product-image"
-                            loading="lazy"
-                            onerror="this.style.background='linear-gradient(135deg, #1a1a2e, #1b3d2d)'; this.alt='Image Placeholder';">
-                        <div class="product-overlay-actions">
-                            <button class="quick-view-btn" aria-label="Quick view"><i class="fas fa-eye"></i></button>
-                            <button class="quick-add-btn" aria-label="Add to cart"><i
-                                    class="fas fa-shopping-bag"></i></button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Graphic Streetwear T-Shirt</h3>
-                        <p class="product-price">₦20,000</p>
-                        <div class="product-features">
-                            <span><i class="fas fa-star"></i> Premium Quality</span>
-                            <span><i class="fas fa-undo"></i> Easy Returns</span>
-                            <span><i class="fas fa-globe-africa"></i> Worldwide Shipping</span>
-                        </div>
-                        <button class="btn btn-product add-to-cart" data-id="4" data-name="Graphic Streetwear T-Shirt"
-                            data-price="20000">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!-- Product 5 -->
-                <div class="product-card" data-id="5">
-                    <div class="product-badge badge-new">NEW</div>
-                    <div class="product-image-wrapper">
-                        <img src="images/Inspirational Graphic Long-Sleeve Tee.jpeg"
-                            alt="Inspirational Graphic Long-Sleeve Tee" class="product-image" loading="lazy"
-                            onerror="this.style.background='linear-gradient(135deg, #1a1a2e, #1b3d2d)'; this.alt='Image Placeholder';">
-                        <div class="product-overlay-actions">
-                            <button class="quick-view-btn" aria-label="Quick view"><i class="fas fa-eye"></i></button>
-                            <button class="quick-add-btn" aria-label="Add to cart"><i
-                                    class="fas fa-shopping-bag"></i></button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Inspirational Graphic Long-Sleeve Tee</h3>
-                        <p class="product-price">₦30,000</p>
-                        <div class="product-features">
-                            <span><i class="fas fa-star"></i> Premium Quality</span>
-                            <span><i class="fas fa-undo"></i> Easy Returns</span>
-                            <span><i class="fas fa-globe-africa"></i> Worldwide Shipping</span>
-                        </div>
-                        <button class="btn btn-product add-to-cart" data-id="5"
-                            data-name="Inspirational Graphic Long-Sleeve Tee" data-price="30000">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!-- Product 6 -->
-                <div class="product-card" data-id="6">
-                    <div class="product-badge badge-new">NEW</div>
-                    <div class="product-image-wrapper">
-                        <img src="images/No-sleeve.jpg" alt="Inspirational Graphic No-Sleeve Tee" class="product-image"
-                            loading="lazy"
-                            onerror="this.style.background='linear-gradient(135deg, #1a1a2e, #1b3d2d)'; this.alt='Image Placeholder';">
-                        <div class="product-overlay-actions">
-                            <button class="quick-view-btn" aria-label="Quick view"><i class="fas fa-eye"></i></button>
-                            <button class="quick-add-btn" aria-label="Add to cart"><i
-                                    class="fas fa-shopping-bag"></i></button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Inspirational Graphic No-Sleeve Tee</h3>
-                        <p class="product-price">₦10,000</p>
-                        <div class="product-features">
-                            <span><i class="fas fa-star"></i> Premium Quality</span>
-                            <span><i class="fas fa-undo"></i> Easy Returns</span>
-                            <span><i class="fas fa-globe-africa"></i> Worldwide Shipping</span>
-                        </div>
-                        <button class="btn btn-product add-to-cart" data-id="6"
-                            data-name="Inspirational Graphic No-Sleeve Tee" data-price="10000">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">FEATURED DROP</h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">Limited pieces. Maximum impact.</p>
         </div>
+        <div class="product-grid">
+          <!-- Product 1 -->
+          <div class="product-card" data-id="1">
+            <div class="product-badge">HOT</div>
+            <div class="product-image-wrapper">
+              <img
+                src="images/Graphic Streetwear T-Shirt.jpeg"
+                alt="COSMIC CREW TEE"
+                class="product-image"
+                loading="lazy"
+                onerror="
+                  this.style.background =
+                    'linear-gradient(135deg, #1a1a2e, #2d1b3d)';
+                  this.alt = 'Image Placeholder';
+                "
+              />
+              <div class="product-overlay-actions">
+                <button class="quick-view-btn" aria-label="Quick view">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="quick-add-btn" aria-label="Add to cart">
+                  <i class="fas fa-shopping-bag"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">COSMIC CREW TEE</h3>
+              <p class="product-price">₦25,000</p>
+              <div class="product-features">
+                <span><i class="fas fa-star"></i> Premium Quality</span>
+                <span><i class="fas fa-undo"></i> Easy Returns</span>
+                <span
+                  ><i class="fas fa-globe-africa"></i> Worldwide Shipping</span
+                >
+              </div>
+              <button
+                class="btn btn-product add-to-cart"
+                data-id="1"
+                data-name="COSMIC CREW TEE"
+                data-price="25000"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card" data-id="2">
+            <div class="product-badge badge">NEW</div>
+            <div class="product-image-wrapper">
+              <img
+                src="images/real-ones-hoodie.jpeg"
+                alt="Real Ones Hoodie"
+                class="product-image"
+                loading="lazy"
+                onerror="
+                  this.style.background =
+                    'linear-gradient(135deg, #1a1a2e, #3d1b2d)';
+                  this.alt = 'Image Placeholder';
+                "
+              />
+              <div class="product-overlay-actions">
+                <button class="quick-view-btn" aria-label="Quick view">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button
+                  class="quick-add-btn disabled"
+                  aria-label="Sold out"
+                  disabled
+                >
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">REAL ONES HOODIE</h3>
+              <p class="product-price">₦25,000</p>
+              <div class="product-features">
+                <span><i class="fas fa-star"></i> Premium Quality</span>
+                <span><i class="fas fa-undo"></i> Easy Returns</span>
+                <span
+                  ><i class="fas fa-globe-africa"></i> Worldwide Shipping</span
+                >
+              </div>
+              <button class="btn btn-product btn-sold-out" disabled>
+                Sold Out
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card" data-id="3">
+            <div class="product-badge badge-new">NEW</div>
+            <div class="product-image-wrapper">
+              <img
+                src="images/Cube-tee.jpeg"
+                alt="Cube Tee"
+                class="product-image"
+                loading="lazy"
+                onerror="
+                  this.style.background =
+                    'linear-gradient(135deg, #1a1a2e, #1b3d2d)';
+                  this.alt = 'Image Placeholder';
+                "
+              />
+              <div class="product-overlay-actions">
+                <button class="quick-view-btn" aria-label="Quick view">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="quick-add-btn" aria-label="Add to cart">
+                  <i class="fas fa-shopping-bag"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">CUBE TEE</h3>
+              <p class="product-price">₦25,000</p>
+              <div class="product-features">
+                <span><i class="fas fa-star"></i> Premium Quality</span>
+                <span><i class="fas fa-undo"></i> Easy Returns</span>
+                <span
+                  ><i class="fas fa-globe-africa"></i> Worldwide Shipping</span
+                >
+              </div>
+              <button
+                class="btn btn-product add-to-cart"
+                data-id="3"
+                data-name="CUBE TEE"
+                data-price="25000"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product-card" data-id="4">
+            <div class="product-badge badge-new">NEW</div>
+            <div class="product-image-wrapper">
+              <img
+                src="images/cosmic-crew-tee.jpeg"
+                alt="graphic streetwear T-Shirt"
+                class="product-image"
+                loading="lazy"
+                onerror="
+                  this.style.background =
+                    'linear-gradient(135deg, #1a1a2e, #1b3d2d)';
+                  this.alt = 'Image Placeholder';
+                "
+              />
+              <div class="product-overlay-actions">
+                <button class="quick-view-btn" aria-label="Quick view">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="quick-add-btn" aria-label="Add to cart">
+                  <i class="fas fa-shopping-bag"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Graphic Streetwear T-Shirt</h3>
+              <p class="product-price">₦20,000</p>
+              <div class="product-features">
+                <span><i class="fas fa-star"></i> Premium Quality</span>
+                <span><i class="fas fa-undo"></i> Easy Returns</span>
+                <span
+                  ><i class="fas fa-globe-africa"></i> Worldwide Shipping</span
+                >
+              </div>
+              <button
+                class="btn btn-product add-to-cart"
+                data-id="4"
+                data-name="Graphic Streetwear T-Shirt"
+                data-price="20000"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="product-card" data-id="5">
+            <div class="product-badge badge-new">NEW</div>
+            <div class="product-image-wrapper">
+              <img
+                src="images/Inspirational Graphic Long-Sleeve Tee.jpeg"
+                alt="Inspirational Graphic Long-Sleeve Tee"
+                class="product-image"
+                loading="lazy"
+                onerror="
+                  this.style.background =
+                    'linear-gradient(135deg, #1a1a2e, #1b3d2d)';
+                  this.alt = 'Image Placeholder';
+                "
+              />
+              <div class="product-overlay-actions">
+                <button class="quick-view-btn" aria-label="Quick view">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="quick-add-btn" aria-label="Add to cart">
+                  <i class="fas fa-shopping-bag"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">
+                Inspirational Graphic Long-Sleeve Tee
+              </h3>
+              <p class="product-price">₦30,000</p>
+              <div class="product-features">
+                <span><i class="fas fa-star"></i> Premium Quality</span>
+                <span><i class="fas fa-undo"></i> Easy Returns</span>
+                <span
+                  ><i class="fas fa-globe-africa"></i> Worldwide Shipping</span
+                >
+              </div>
+              <button
+                class="btn btn-product add-to-cart"
+                data-id="5"
+                data-name="Inspirational Graphic Long-Sleeve Tee"
+                data-price="30000"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="product-card" data-id="6">
+            <div class="product-badge badge-new">NEW</div>
+            <div class="product-image-wrapper">
+              <img
+                src="images/No-sleeve.jpg"
+                alt="Inspirational Graphic No-Sleeve Tee"
+                class="product-image"
+                loading="lazy"
+                onerror="
+                  this.style.background =
+                    'linear-gradient(135deg, #1a1a2e, #1b3d2d)';
+                  this.alt = 'Image Placeholder';
+                "
+              />
+              <div class="product-overlay-actions">
+                <button class="quick-view-btn" aria-label="Quick view">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="quick-add-btn" aria-label="Add to cart">
+                  <i class="fas fa-shopping-bag"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Inspirational Graphic No-Sleeve Tee</h3>
+              <p class="product-price">₦10,000</p>
+              <div class="product-features">
+                <span><i class="fas fa-star"></i> Premium Quality</span>
+                <span><i class="fas fa-undo"></i> Easy Returns</span>
+                <span
+                  ><i class="fas fa-globe-africa"></i> Worldwide Shipping</span
+                >
+              </div>
+              <button
+                class="btn btn-product add-to-cart"
+                data-id="6"
+                data-name="Inspirational Graphic No-Sleeve Tee"
+                data-price="10000"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- 🔥 NOT FOR EVERYONE SECTION -->
     <section class="exclusive-section" id="latest-drop">
-        <div class="container">
-            <div class="exclusive-content">
-                <h2 class="exclusive-title">Not For Everyone.</h2>
-                <p class="exclusive-highlight">ONLY THE REAL ONES.</p>
-                <p class="exclusive-description">fellaż isn't just clothing. It's a statement. A mindset. A movement for
-                    those who dare to stand out.</p>
-                <a href="#shop" class="btn btn-primary">Explore the Collection</a>
-            </div>
+      <div class="container">
+        <div class="exclusive-content">
+          <h2 class="exclusive-title">Not For Everyone.</h2>
+          <p class="exclusive-highlight">ONLY THE REAL ONES.</p>
+          <p class="exclusive-description">
+            fellaż isn't just clothing. It's a statement. A mindset. A movement
+            for those who dare to stand out.
+          </p>
+          <a href="#shop" class="btn btn-primary">Explore the Collection</a>
         </div>
+      </div>
     </section>
 
     <!-- 🔥 LIFESTYLE / LOOKBOOK SECTION -->
-    <section class="lifestyle-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">LIFESTYLE</h2>
-                <div class="section-line"></div>
-                <p class="section-subtitle">fellaż · NEW LOOKBOOK</p>
-            </div>
-            <div class="lookbook-grid">
-                <div class="lookbook-item large">
-                    <img src="images/hero-bg.png" alt="fellaż Lifestyle" loading="lazy"
-                        onerror="this.style.background='linear-gradient(135deg, #111, #222)'; this.alt='Lookbook Image 1';">
-                    <div class="lookbook-overlay">
-                        <span>Street Edition</span>
-                    </div>
-                </div>
-                <div class="lookbook-item">
-                    <img src="images/lookbook-2.jpg" alt="fellaż Lifestyle" loading="lazy"
-                        onerror="this.style.background='linear-gradient(135deg, #1a1a2e, #222)'; this.alt='Lookbook Image 2';">
-                    <div class="lookbook-overlay">
-                        <span>Cosmic Drop</span>
-                    </div>
-                </div>
-                <div class="lookbook-item">
-                    <img src="images/lookbook-3.jpg" alt="fellaż Lifestyle" loading="lazy"
-                        onerror="this.style.background='linear-gradient(135deg, #222, #1a1a2e)'; this.alt='Lookbook Image 3';">
-                    <div class="lookbook-overlay">
-                        <span>Urban Flow</span>
-                    </div>
-                </div>
-            </div>
+    <!-- <section class="lifestyle-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">LIFESTYLE</h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">fellaż · NEW LOOKBOOK</p>
         </div>
-    </section>
+        <div class="lookbook-grid">
+          <div class="lookbook-item large">
+            <img
+              src="images/hero-bg.png"
+              alt="fellaż Lifestyle"
+              loading="lazy"
+              onerror="
+                this.style.background = 'linear-gradient(135deg, #111, #222)';
+                this.alt = 'Lookbook Image 1';
+              "
+            />
+            <div class="lookbook-overlay">
+              <span>Street Edition</span>
+            </div>
+          </div>
+          <div class="lookbook-item">
+            <img
+              src="images/lookbook-2.jpg"
+              alt="fellaż Lifestyle"
+              loading="lazy"
+              onerror="
+                this.style.background =
+                  'linear-gradient(135deg, #1a1a2e, #222)';
+                this.alt = 'Lookbook Image 2';
+              "
+            />
+            <div class="lookbook-overlay">
+              <span>Cosmic Drop</span>
+            </div>
+          </div>
+          <div class="lookbook-item">
+            <img
+              src="images/lookbook-3.jpg"
+              alt="fellaż Lifestyle"
+              loading="lazy"
+              onerror="
+                this.style.background =
+                  'linear-gradient(135deg, #222, #1a1a2e)';
+                this.alt = 'Lookbook Image 3';
+              "
+            />
+            <div class="lookbook-overlay">
+              <span>Urban Flow</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
 
     <!-- 🔥 COUNTDOWN TIMER SECTION -->
     <section class="countdown-section" id="countdown">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">NEXT DROP</h2>
-                <div class="section-line"></div>
-                <p class="section-subtitle">The countdown is on. Don't miss out.</p>
-            </div>
-            <div class="countdown-timer" id="countdownTimer">
-                <div class="countdown-block">
-                    <span class="countdown-number" id="days">02</span>
-                    <span class="countdown-label">DAYS</span>
-                </div>
-                <span class="countdown-separator">:</span>
-                <div class="countdown-block">
-                    <span class="countdown-number" id="hours">14</span>
-                    <span class="countdown-label">HRS</span>
-                </div>
-                <span class="countdown-separator">:</span>
-                <div class="countdown-block">
-                    <span class="countdown-number" id="minutes">33</span>
-                    <span class="countdown-label">MINS</span>
-                </div>
-                <span class="countdown-separator">:</span>
-                <div class="countdown-block">
-                    <span class="countdown-number" id="seconds">09</span>
-                    <span class="countdown-label">SECS</span>
-                </div>
-            </div>
-            <a href="#" class="btn btn-primary btn-notify" id="notifyBtn">GET NOTIFIED</a>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">NEXT DROP</h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">The countdown is on. Don't miss out.</p>
         </div>
+        <div class="countdown-timer" id="countdownTimer">
+          <div class="countdown-block">
+            <span class="countdown-number" id="days">02</span>
+            <span class="countdown-label">DAYS</span>
+          </div>
+          <span class="countdown-separator">:</span>
+          <div class="countdown-block">
+            <span class="countdown-number" id="hours">14</span>
+            <span class="countdown-label">HRS</span>
+          </div>
+          <span class="countdown-separator">:</span>
+          <div class="countdown-block">
+            <span class="countdown-number" id="minutes">33</span>
+            <span class="countdown-label">MINS</span>
+          </div>
+          <span class="countdown-separator">:</span>
+          <div class="countdown-block">
+            <span class="countdown-number" id="seconds">09</span>
+            <span class="countdown-label">SECS</span>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary btn-notify" id="notifyBtn"
+          >GET NOTIFIED</a
+        >
+      </div>
     </section>
 
     <!-- 🔥 NEWSLETTER SECTION -->
     <section class="newsletter-section">
-        <div class="container">
-            <div class="newsletter-inner">
-                <h2 class="newsletter-title">Join the Real Ones</h2>
-                <p class="newsletter-description">Get exclusive access to drops, discounts, and the fellaż lifestyle.
-                </p>
-                <form class="newsletter-form" id="newsletterForm">
-                    <div class="input-group">
-                        <input type="email" placeholder="Enter your email" required class="newsletter-input"
-                            id="newsletterEmail">
-                        <button type="submit" class="btn btn-primary newsletter-btn">SUBSCRIBE</button>
-                    </div>
-                </form>
-                <p class="newsletter-note">No spam. Only real vibes. Unsubscribe anytime.</p>
+      <div class="container">
+        <div class="newsletter-inner">
+          <h2 class="newsletter-title">Join the Real Ones</h2>
+          <p class="newsletter-description">
+            Get exclusive access to drops, discounts, and the fellaż lifestyle.
+          </p>
+          <form class="newsletter-form" id="newsletterForm">
+            <div class="input-group">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                required
+                class="newsletter-input"
+                id="newsletterEmail"
+              />
+              <button type="submit" class="btn btn-primary newsletter-btn">
+                <i class="fas fa-paper-plane"></i> SUBSCRIBE
+              </button>
             </div>
+          </form>
+          <p class="newsletter-note">
+            No spam. Only real vibes. Unsubscribe anytime.
+          </p>
         </div>
+      </div>
     </section>
 
     <!-- 🔥 FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">fellaż</a>
-                    <p class="footer-tagline">Sharp. Street. Smart.</p>
-                    <p class="footer-description">More than clothing. It's a mindset. A movement. Built for the real
-                        ones.</p>
-                    <div class="footer-socials">
-                        <a href="https://wa.me/2349113010781" target="_blank" rel="noopener noreferrer"
-                            class="footer-social-icon" aria-label="WhatsApp" title="Chat on WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="https://www.instagram.com/fellazluxurybrand?igsh=MTc2bnZveHRvNzV6cA==" target="_blank"
-                            rel="noopener noreferrer" class="footer-social-icon" aria-label="Instagram"
-                            title="Follow on Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="mailto:Fellaz07@gmail.com" class="footer-social-icon" aria-label="Email"
-                            title="Send Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="tel:+2349113010781" class="footer-social-icon" aria-label="Call" title="Call us">
-                            <i class="fas fa-phone"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-links-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="shop.html">Shop Now</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links-col">
-                    <h4>Customer Care</h4>
-                    <ul>
-                        <li><a href="size-guide.html">Size Guide</a></li>
-                        <li><a href="returns.html">Returns Policy</a></li>
-                        <li><a href="faqs.html">FAQs</a></li>
-                        <li><a href="shipping.html">Shipping Info</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links-col">
-                    <h4>Contact Us</h4>
-                    <ul>
-                        <li><a href="https://wa.me/2349113010781" target="_blank" rel="noopener noreferrer"><i
-                                    class="fab fa-whatsapp"></i> +234 911 301 0781</a></li>
-                        <li><a href="tel:+2349074569733"><i class="fas fa-phone"></i> +234 907 456 9733</a></li>
-                        <li><a href="mailto:Fellaz07@gmail.com"><i class="fas fa-envelope"></i> Fellaz07@gmail.com</a>
-                        </li>
-                    </ul>
-                </div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">fellaż</a>
+            <p class="footer-tagline">Sharp. Street. Smart.</p>
+            <p class="footer-description">
+              More than clothing. It's a mindset. A movement. Built for the real
+              ones.
+            </p>
+            <div class="footer-socials">
+              <a
+                href="https://wa.me/2349113010781"
+                target="_blank"
+                class="footer-social-icon"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/fellazluxurybrand"
+                target="_blank"
+                class="footer-social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="mailto:Fellaz07@gmail.com" class="footer-social-icon"
+                ><i class="fas fa-envelope"></i
+              ></a>
+              <a href="tel:+2349113010781" class="footer-social-icon"
+                ><i class="fas fa-phone"></i
+              ></a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> fellaż. All rights reserved. Built for the real ones.</p>
-                <p class="footer-payment">MORE PAYMENT OPTIONS</p>
-            </div>
+          </div>
+          <div class="footer-links-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="shop.html">Shop Now</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Customer Care</h4>
+            <ul>
+              <li><a href="size-guide.html">Size Guide</a></li>
+              <li><a href="returns.html">Returns Policy</a></li>
+              <li><a href="faqs.html">FAQs</a></li>
+              <li><a href="shipping.html">Shipping Info</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Contact Us</h4>
+            <ul>
+              <li>
+                <a href="https://wa.me/2349113010781" target="_blank"
+                  ><i class="fab fa-whatsapp"></i> +234 911 301 0781</a
+                >
+              </li>
+              <li>
+                <a href="tel:+2349074569733"
+                  ><i class="fas fa-phone"></i> +234 907 456 9733</a
+                >
+              </li>
+              <li>
+                <a href="mailto:Fellaz07@gmail.com"
+                  ><i class="fas fa-envelope"></i> Fellaz07@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear"></span> fellaż. All rights reserved.
+            Built for the real ones.
+          </p>
+          <p class="footer-payment">MORE PAYMENT OPTIONS</p>
+        </div>
+      </div>
     </footer>
 
     <!-- 🔥 FLOATING WHATSAPP BUTTON -->
-    <a href="https://wa.me/2349113010781" target="_blank" rel="noopener noreferrer" class="floating-whatsapp"
-        aria-label="Chat on WhatsApp" title="Chat with us on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+    <a
+      href="https://wa.me/2349113010781"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="floating-whatsapp"
+      aria-label="Chat on WhatsApp"
+      title="Chat with us on WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- 🔥 TOAST NOTIFICATION -->
@@ -435,79 +648,91 @@
 
     <script src="js/script.js"></script>
     <script>
-        // 🔥 HOMEPAGE CART STORAGE (same as shop/product pages)
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            toast.textContent = message;
-            toast.classList.add('show');
-            setTimeout(() => toast.classList.remove('show'), 2500);
+      // 🔥 HOMEPAGE CART STORAGE (same as shop/product pages)
+      function showToast(message) {
+        const toast = document.getElementById("toast");
+        toast.textContent = message;
+        toast.classList.add("show");
+        setTimeout(() => toast.classList.remove("show"), 2500);
+      }
+
+      function updateCartBadge() {
+        const cart =
+          JSON.parse(localStorage.getItem("fellaz_cart_items")) || [];
+        const total = cart.reduce((sum, item) => sum + item.quantity, 0);
+        document.querySelector(".cart-count").textContent = total;
+        localStorage.setItem("fellaz_cart", total);
+      }
+
+      function addToCart(
+        productId,
+        productName,
+        productPrice,
+        size = "M",
+        quantity = 1,
+      ) {
+        let cart = JSON.parse(localStorage.getItem("fellaz_cart_items")) || [];
+        const existingIndex = cart.findIndex(
+          (item) => item.id === productId && item.size === size,
+        );
+        if (existingIndex !== -1) {
+          cart[existingIndex].quantity += quantity;
+        } else {
+          cart.push({ id: productId, size: size, quantity: quantity });
         }
-
-        function updateCartBadge() {
-            const cart = JSON.parse(localStorage.getItem('fellaz_cart_items')) || [];
-            const total = cart.reduce((sum, item) => sum + item.quantity, 0);
-            document.querySelector('.cart-count').textContent = total;
-            localStorage.setItem('fellaz_cart', total);
-        }
-
-        function addToCart(productId, productName, productPrice, size = 'M', quantity = 1) {
-            let cart = JSON.parse(localStorage.getItem('fellaz_cart_items')) || [];
-            const existingIndex = cart.findIndex(item => item.id === productId && item.size === size);
-            if (existingIndex !== -1) {
-                cart[existingIndex].quantity += quantity;
-            } else {
-                cart.push({ id: productId, size: size, quantity: quantity });
-            }
-            localStorage.setItem('fellaz_cart_items', JSON.stringify(cart));
-            updateCartBadge();
-            showToast(`🔥 ${productName} (${size}) added to bag!`);
-        }
-
-        // Attach event listeners to all "Add to Cart" buttons
-        document.querySelectorAll('.add-to-cart').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();  // prevent card click if the whole card is clickable
-                const id = parseInt(btn.dataset.id);
-                const name = btn.dataset.name;
-                const price = parseInt(btn.dataset.price);
-                addToCart(id, name, price, 'M', 1);
-            });
-        });
-
-        // Quick view (optional toast)
-        document.querySelectorAll('.quick-view-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                showToast('👀 Quick view coming soon');
-            });
-        });
-
-        // Quick add (same as Add to Cart) – for the little bag icon
-        document.querySelectorAll('.quick-add-btn:not(.disabled)').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                const card = btn.closest('.product-card');
-                const id = parseInt(card.dataset.id);
-                const name = card.querySelector('.product-name').innerText;
-                const priceText = card.querySelector('.product-price').innerText.replace(/[^0-9]/g, '');
-                const price = parseInt(priceText);
-                addToCart(id, name, price, 'M', 1);
-            });
-        });
-
-        // Initialize cart badge on page load
+        localStorage.setItem("fellaz_cart_items", JSON.stringify(cart));
         updateCartBadge();
+        showToast(`🔥 ${productName} (${size}) added to bag!`);
+      }
 
-        // Also listen for storage events (if cart changes in another tab)
-        window.addEventListener('storage', (e) => {
-            if (e.key === 'fellaz_cart_items' || e.key === 'fellaz_cart') {
-                updateCartBadge();
-            }
+      // Attach event listeners to all "Add to Cart" buttons
+      document.querySelectorAll(".add-to-cart").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation(); // prevent card click if the whole card is clickable
+          const id = parseInt(btn.dataset.id);
+          const name = btn.dataset.name;
+          const price = parseInt(btn.dataset.price);
+          addToCart(id, name, price, "M", 1);
         });
-    </script>
-</body>
+      });
 
+      // Quick view (optional toast)
+      document.querySelectorAll(".quick-view-btn").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          showToast("👀 Quick view coming soon");
+        });
+      });
+
+      // Quick add (same as Add to Cart) – for the little bag icon
+      document
+        .querySelectorAll(".quick-add-btn:not(.disabled)")
+        .forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const card = btn.closest(".product-card");
+            const id = parseInt(card.dataset.id);
+            const name = card.querySelector(".product-name").innerText;
+            const priceText = card
+              .querySelector(".product-price")
+              .innerText.replace(/[^0-9]/g, "");
+            const price = parseInt(priceText);
+            addToCart(id, name, price, "M", 1);
+          });
+        });
+
+      // Initialize cart badge on page load
+      updateCartBadge();
+
+      // Also listen for storage events (if cart changes in another tab)
+      window.addEventListener("storage", (e) => {
+        if (e.key === "fellaz_cart_items" || e.key === "fellaz_cart") {
+          updateCartBadge();
+        }
+      });
+    </script>
+  </body>
 </html>

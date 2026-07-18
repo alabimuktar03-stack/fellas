@@ -1,240 +1,343 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About fellaż - Sharp. Street. Smart. More than clothing, it's a mindset.">
-    <meta name="theme-color" content="#0a0a0a">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="About fellaż - Sharp. Street. Smart. More than clothing, it's a mindset."
+    />
+    <meta name="theme-color" content="#0a0a0a" />
     <title>About | fellaż</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="css/about.css">
-</head>
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/about.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Cosmic Background -->
     <div class="cosmic-bg" id="cosmicBg"></div>
 
     <!-- Top Bar -->
     <div class="top-bar">
-        <span>SHARP. STREET. SMART.</span>
-        <span class="top-bar-divider">|</span>
-        <span>BUILT FOR THE REAL ONES.</span>
+      <span>SHARP. STREET. SMART.</span>
+      <span class="top-bar-divider">|</span>
+      <span>BUILT FOR THE REAL ONES.</span>
     </div>
 
     <!-- Header / Navigation (consistent with homepage: use image logo) -->
     <header class="header" id="header">
-        <div class="container header-inner">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" width="100" height="50" alt="fellaż logo">
-            </a>
-            <nav class="nav" id="nav">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link active">About</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li><a href="shop.html" class="nav-link nav-cta">Shop Now</a></li>
-                </ul>
-            </nav>
-            <div class="header-icons">
-                <a href="search.html" class="icon-link search-toggle" aria-label="Search"><i
-                        class="fas fa-search"></i></a>
-                <a href="cart.html" class="icon-link cart-toggle" aria-label="Cart"><i
-                        class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
-                <button class="hamburger" id="hamburger" aria-label="Menu">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <img
+            src="images/logo.png"
+            width="100"
+            height="50"
+            alt="fellaż logo"
+          />
+        </a>
+        <nav class="nav" id="nav">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link active">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="shop.html" class="nav-link nav-cta">Shop Now</a></li>
+          </ul>
+        </nav>
+        <div class="header-icons">
+          <a
+            href="search.html"
+            class="icon-link search-toggle"
+            aria-label="Search"
+            ><i class="fas fa-search"></i
+          ></a>
+          <a href="cart.html" class="icon-link cart-toggle" aria-label="Cart"
+            ><i class="fas fa-shopping-bag"></i
+            ><span class="cart-count">0</span></a
+          >
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
         </div>
+      </div>
     </header>
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-inner">
-            <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">&times;</button>
-            <ul class="mobile-nav-list">
-                <li><a href="index.html" class="mobile-nav-link">Home</a></li>
-                <li><a href="about.html" class="mobile-nav-link">About</a></li>
-                <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
-                <li><a href="shop.html" class="mobile-nav-link mobile-nav-cta">Shop Now</a></li>
-            </ul>
-            <div class="mobile-menu-socials">
-                <a href="https://wa.me/2349113010781" target="_blank" class="social-icon-mob" aria-label="WhatsApp"><i
-                        class="fab fa-whatsapp"></i></a>
-                <a href="https://www.instagram.com/fellazluxurybrand?igsh=MTc2bnZveHRvNzV6cA==" target="_blank"
-                    class="social-icon-mob" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="mailto:Fellaz07@gmail.com" class="social-icon-mob" aria-label="Email"><i
-                        class="fas fa-envelope"></i></a>
-            </div>
+      <div class="mobile-menu-inner">
+        <button
+          class="mobile-menu-close"
+          id="mobileMenuClose"
+          aria-label="Close menu"
+        >
+          &times;
+        </button>
+        <ul class="mobile-nav-list">
+          <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+          <li><a href="about.html" class="mobile-nav-link">About</a></li>
+          <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+          <li>
+            <a href="shop.html" class="mobile-nav-link mobile-nav-cta"
+              >Shop Now</a
+            >
+          </li>
+        </ul>
+        <div class="mobile-menu-socials">
+          <a
+            href="https://wa.me/2349113010781"
+            target="_blank"
+            class="social-icon-mob"
+            aria-label="WhatsApp"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/fellazluxurybrand?igsh=MTc2bnZveHRvNzV6cA=="
+            target="_blank"
+            class="social-icon-mob"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="mailto:Fellaz07@gmail.com"
+            class="social-icon-mob"
+            aria-label="Email"
+            ><i class="fas fa-envelope"></i
+          ></a>
         </div>
+      </div>
     </div>
 
     <!-- Page Hero -->
     <section class="page-hero">
-        <div class="page-hero-overlay"></div>
-        <div class="container page-hero-content">
-            <p class="page-hero-eyebrow">THE REAL ONES</p>
-            <h1 class="page-hero-title">About fellaż</h1>
-            <p class="page-hero-subtitle">More than clothing. It’s a mindset. A movement.</p>
-        </div>
+      <div class="page-hero-overlay"></div>
+      <div class="container page-hero-content">
+        <p class="page-hero-eyebrow">THE REAL ONES</p>
+        <h1 class="page-hero-title">About fellaż</h1>
+        <p class="page-hero-subtitle">
+          More than clothing. It’s a mindset. A movement.
+        </p>
+      </div>
     </section>
 
     <!-- Our Story Section -->
     <section class="about-story-section reveal">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">OUR STORY</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="about-story-grid">
-                <div class="about-story-text">
-                    <p class="lead">fellaż wasn’t born in a boardroom. It was born on the streets, in the rhythm of the
-                        city, under cosmic skies.</p>
-                    <p>We design for those who move different — the real ones who don’t follow trends, they set them.
-                        Our pieces blend sharp tailoring with street‑smart attitude, all wrapped in a futuristic, almost
-                        cosmic energy that makes you feel unstoppable.</p>
-                    <p>Every tee, every hoodie, every stitch is a statement: <strong>Sharp. Street. Smart.</strong></p>
-                </div>
-                <div class="about-story-image">
-                    <img src="images/about-story.jpg" alt="fellaż street style model" loading="lazy"
-                        onerror="this.src='https://placehold.co/600x450/1a151f/cba258?text=fellaż+Story'; this.alt='About fellaż placeholder image';">
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">OUR STORY</h2>
+          <div class="section-line"></div>
         </div>
+        <div class="about-story-grid">
+          <div class="about-story-text">
+            <p class="lead">
+              fellaż wasn’t born in a boardroom. It was born on the streets, in
+              the rhythm of the city, under cosmic skies.
+            </p>
+            <p>
+              We design for those who move different — the real ones who don’t
+              follow trends, they set them. Our pieces blend sharp tailoring
+              with street‑smart attitude, all wrapped in a futuristic, almost
+              cosmic energy that makes you feel unstoppable.
+            </p>
+            <p>
+              Every tee, every hoodie, every stitch is a statement:
+              <strong>Sharp. Street. Smart.</strong>
+            </p>
+          </div>
+          <div class="about-story-image">
+            <img
+              src="images/about-story.jpg"
+              alt="fellaż street style model"
+              loading="lazy"
+              onerror="
+                this.src =
+                  'https://placehold.co/600x450/1a151f/cba258?text=fellaż+Story';
+                this.alt = 'About fellaż placeholder image';
+              "
+            />
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Mission & Values -->
     <section class="about-mission-section reveal">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">THE MISSION</h2>
-                <div class="section-line"></div>
-                <p class="section-subtitle">What we stand for.</p>
-            </div>
-            <div class="mission-cards">
-                <div class="mission-card">
-                    <div class="mission-icon"><i class="fas fa-bolt"></i></div>
-                    <h3>Authenticity</h3>
-                    <p>No imitations. No shortcuts. Only original designs that reflect the raw energy of the streets.
-                    </p>
-                </div>
-                <div class="mission-card">
-                    <div class="mission-icon"><i class="fas fa-globe-africa"></i></div>
-                    <h3>Global Mindset</h3>
-                    <p>From Lagos to the world. Our vibration is universal — built for the real ones everywhere.</p>
-                </div>
-                <div class="mission-card">
-                    <div class="mission-icon"><i class="fas fa-star"></i></div>
-                    <h3>Quality First</h3>
-                    <p>Premium fabrics, precision cuts, and comfort that lasts. Because real ones deserve the best.</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">THE MISSION</h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">What we stand for.</p>
         </div>
+        <div class="mission-cards">
+          <div class="mission-card">
+            <div class="mission-icon"><i class="fas fa-bolt"></i></div>
+            <h3>Authenticity</h3>
+            <p>
+              No imitations. No shortcuts. Only original designs that reflect
+              the raw energy of the streets.
+            </p>
+          </div>
+          <div class="mission-card">
+            <div class="mission-icon"><i class="fas fa-globe-africa"></i></div>
+            <h3>Global Mindset</h3>
+            <p>
+              From Lagos to the world. Our vibration is universal — built for
+              the real ones everywhere.
+            </p>
+          </div>
+          <div class="mission-card">
+            <div class="mission-icon"><i class="fas fa-star"></i></div>
+            <h3>Quality First</h3>
+            <p>
+              Premium fabrics, precision cuts, and comfort that lasts. Because
+              real ones deserve the best.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- The Real Ones Section -->
     <section class="about-realones-section reveal">
-        <div class="container">
-            <div class="realones-content">
-                <h2 class="realones-title">FOR THE REAL ONES.</h2>
-                <p class="realones-quote">"We are here to help you find what you need. This is for real ones. Welcome to
-                    the family."</p>
-                <p>fellaż is more than a brand — it’s a family of like‑minded individuals who refuse to blend in. When
-                    you wear fellaż, you’re not just wearing clothes, you’re representing a movement.</p>
-                <a href="index.html#shop" class="btn btn-primary">Shop the Collection</a>
-            </div>
+      <div class="container">
+        <div class="realones-content">
+          <h2 class="realones-title">FOR THE REAL ONES.</h2>
+          <p class="realones-quote">
+            "We are here to help you find what you need. This is for real ones.
+            Welcome to the family."
+          </p>
+          <p>
+            fellaż is more than a brand — it’s a family of like‑minded
+            individuals who refuse to blend in. When you wear fellaż, you’re not
+            just wearing clothes, you’re representing a movement.
+          </p>
+          <a href="index.html#shop" class="btn btn-primary"
+            >Shop the Collection</a
+          >
         </div>
+      </div>
     </section>
 
     <!-- Quick Contact Info (optional) -->
     <section class="about-contact-strip reveal">
-        <div class="container">
-            <div class="strip-inner">
-                <div class="strip-item">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>+234 911 301 0781</span>
-                </div>
-                <div class="strip-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>Fellaz07@gmail.com</span>
-                </div>
-                <div class="strip-item">
-                    <i class="fab fa-instagram"></i>
-                    <span>@fellazluxurybrand</span>
-                </div>
-            </div>
+      <div class="container">
+        <div class="strip-inner">
+          <div class="strip-item">
+            <i class="fab fa-whatsapp"></i>
+            <span>+234 911 301 0781</span>
+          </div>
+          <div class="strip-item">
+            <i class="fas fa-envelope"></i>
+            <span>Fellaz07@gmail.com</span>
+          </div>
+          <div class="strip-item">
+            <i class="fab fa-instagram"></i>
+            <span>@fellazluxurybrand</span>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">fellaż</a>
-                    <p class="footer-tagline">Sharp. Street. Smart.</p>
-                    <p class="footer-description">More than clothing. It's a mindset. A movement. Built for the real
-                        ones.</p>
-                    <div class="footer-socials">
-                        <a href="https://wa.me/2349113010781" target="_blank" class="footer-social-icon"
-                            aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://www.instagram.com/fellazluxurybrand?igsh=MTc2bnZveHRvNzV6cA==" target="_blank"
-                            class="footer-social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="mailto:Fellaz07@gmail.com" class="footer-social-icon" aria-label="Email"><i
-                                class="fas fa-envelope"></i></a>
-                        <a href="tel:+2349113010781" class="footer-social-icon" aria-label="Call"><i
-                                class="fas fa-phone"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="shop.html">Shop Now</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links-col">
-                    <h4>Customer Care</h4>
-                    <ul>
-                        <li><a href="size-guide.html">Size Guide</a></li>
-                        <li><a href="returns.html">Returns Policy</a></li>
-                        <li><a href="faqs.html">FAQs</a></li>
-                        <li><a href="shipping.html">Shipping Info</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links-col">
-                    <h4>Contact Us</h4>
-                    <ul>
-                        <li><a href="https://wa.me/2349113010781" target="_blank"><i class="fab fa-whatsapp"></i> +234
-                                911 301 0781</a></li>
-                        <li><a href="tel:+2349074569733"><i class="fas fa-phone"></i> +234 907 456 9733</a></li>
-                        <li><a href="mailto:Fellaz07@gmail.com"><i class="fas fa-envelope"></i> Fellaz07@gmail.com</a>
-                        </li>
-                    </ul>
-                </div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">fellaż</a>
+            <p class="footer-tagline">Sharp. Street. Smart.</p>
+            <p class="footer-description">
+              More than clothing. It's a mindset. A movement. Built for the real
+              ones.
+            </p>
+            <div class="footer-socials">
+              <a
+                href="https://wa.me/2349113010781"
+                target="_blank"
+                class="footer-social-icon"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/fellazluxurybrand"
+                target="_blank"
+                class="footer-social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="mailto:Fellaz07@gmail.com" class="footer-social-icon"
+                ><i class="fas fa-envelope"></i
+              ></a>
+              <a href="tel:+2349113010781" class="footer-social-icon"
+                ><i class="fas fa-phone"></i
+              ></a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> fellaż. All rights reserved. Built for the real ones.</p>
-                <p class="footer-payment">MORE PAYMENT OPTIONS</p>
-            </div>
+          </div>
+          <div class="footer-links-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="shop.html">Shop Now</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Customer Care</h4>
+            <ul>
+              <li><a href="size-guide.html">Size Guide</a></li>
+              <li><a href="returns.html">Returns Policy</a></li>
+              <li><a href="faqs.html">FAQs</a></li>
+              <li><a href="shipping.html">Shipping Info</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Contact Us</h4>
+            <ul>
+              <li>
+                <a href="https://wa.me/2349113010781" target="_blank"
+                  ><i class="fab fa-whatsapp"></i> +234 911 301 0781</a
+                >
+              </li>
+              <li>
+                <a href="tel:+2349074569733"
+                  ><i class="fas fa-phone"></i> +234 907 456 9733</a
+                >
+              </li>
+              <li>
+                <a href="mailto:Fellaz07@gmail.com"
+                  ><i class="fas fa-envelope"></i> Fellaz07@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear"></span> fellaż. All rights reserved.
+            Built for the real ones.
+          </p>
+          <p class="footer-payment">MORE PAYMENT OPTIONS</p>
+        </div>
+      </div>
     </footer>
 
     <!-- Floating WhatsApp -->
-    <a href="https://wa.me/2349113010781" target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp"><i
-            class="fab fa-whatsapp"></i></a>
+    <a
+      href="https://wa.me/2349113010781"
+      target="_blank"
+      class="floating-whatsapp"
+      aria-label="Chat on WhatsApp"
+      ><i class="fab fa-whatsapp"></i
+    ></a>
 
     <!-- Toast -->
     <div class="toast" id="toast"></div>
 
     <script src="js/script.js"></script>
-</body>
-
+  </body>
 </html>

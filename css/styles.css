@@ -19,15 +19,17 @@
   --badge-new: #2ecc71;
   --badge-sold: #7f8c8d;
   --border-color: #2a2533;
-  --font-heading: 'Bebas Neue', 'Impact', sans-serif;
-  --font-body: 'Montserrat', sans-serif;
-  --font-accent: 'Space Grotesk', sans-serif;
+  --font-heading: "Bebas Neue", "Impact", sans-serif;
+  --font-body: "Montserrat", sans-serif;
+  --font-accent: "Space Grotesk", sans-serif;
   --radius: 6px;
   --shadow-card: 0 12px 24px rgba(0, 0, 0, 0.6);
   --transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1.2);
 }
 
-/* ---------- RESET & BASE ---------- */
+/* =============================================
+   RESET & BASE
+   ============================================= */
 *,
 *::before,
 *::after {
@@ -80,7 +82,9 @@ button {
   padding: 0 24px;
 }
 
-/* ---------- COSMIC BACKGROUND ---------- */
+/* =============================================
+   COSMIC BACKGROUND
+   ============================================= */
 .cosmic-bg {
   position: fixed;
   top: 0;
@@ -92,7 +96,9 @@ button {
   opacity: 0.9;
 }
 
-/* ---------- TOP BAR ---------- */
+/* =============================================
+   TOP BAR
+   ============================================= */
 .top-bar {
   background: #0a0710;
   color: var(--text-secondary);
@@ -114,7 +120,9 @@ button {
   color: var(--accent);
 }
 
-/* ---------- HEADER & NAVIGATION ---------- */
+/* =============================================
+   HEADER & NAVIGATION
+   ============================================= */
 .header {
   position: sticky;
   top: 0;
@@ -171,7 +179,7 @@ button {
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -231,7 +239,7 @@ button {
   justify-content: center;
 }
 
-/* Hamburger */
+/* ---------- Hamburger ---------- */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -249,16 +257,14 @@ button {
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-
 .hamburger.active span:nth-child(2) {
   opacity: 0;
 }
-
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Mobile menu */
+/* ---------- Mobile Menu ---------- */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -325,7 +331,9 @@ button {
   color: var(--accent);
 }
 
-/* ---------- HERO SECTION ---------- */
+/* =============================================
+   HERO SECTION
+   ============================================= */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -334,7 +342,7 @@ button {
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  background: url('/fellas/images/hero background.jpeg') center/cover no-repeat;
+  background: url("/images/hero background.jpeg") center/cover no-repeat;
   background-blend-mode: overlay;
   background-color: rgba(32, 29, 37, 0.75);
 }
@@ -342,7 +350,11 @@ button {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(7, 5, 10, 0.4), rgba(7, 5, 10, 0.9));
+  background: linear-gradient(
+    to bottom,
+    rgba(7, 5, 10, 0.4),
+    rgba(7, 5, 10, 0.9)
+  );
   z-index: 1;
 }
 
@@ -431,11 +443,9 @@ button {
   0% {
     box-shadow: 0 0 0 0 rgba(203, 162, 88, 0.4);
   }
-
   70% {
     box-shadow: 0 0 0 15px rgba(203, 162, 88, 0);
   }
-
   100% {
     box-shadow: 0 0 0 0 rgba(203, 162, 88, 0);
   }
@@ -455,7 +465,6 @@ button {
 }
 
 @keyframes bounce {
-
   0%,
   20%,
   50%,
@@ -463,17 +472,17 @@ button {
   100% {
     transform: translateY(0);
   }
-
   40% {
     transform: translateY(-10px);
   }
-
   60% {
     transform: translateY(-5px);
   }
 }
 
-/* ---------- SECTION GENERAL ---------- */
+/* =============================================
+   SECTION GENERAL
+   ============================================= */
 .section-header {
   text-align: center;
   margin-bottom: 60px;
@@ -498,7 +507,9 @@ button {
   font-weight: 500;
 }
 
-/* ---------- FEATURED DROP (Product Grid) ---------- */
+/* =============================================
+   FEATURED DROP (Product Grid)
+   ============================================= */
 .featured-section {
   padding: 100px 0;
 }
@@ -541,7 +552,6 @@ button {
 .badge-sold {
   background: var(--badge-sold);
 }
-
 .badge-new {
   background: var(--badge-new);
 }
@@ -656,16 +666,15 @@ button {
   pointer-events: none;
 }
 
-/* ---------- EXCLUSIVE SECTION (Not For Everyone) ---------- */
+/* =============================================
+   EXCLUSIVE SECTION (Not For Everyone)
+   ============================================= */
 .exclusive-section {
-  background: url('../images/exclusive-bg.jpg') center/cover no-repeat;
-  background-attachment: scroll;
-  /* fixed causes mobile issues */
+  background: linear-gradient(135deg, #1a1025, #0f0c13);
+  background-blend-mode: multiply;
   padding: 120px 0;
   position: relative;
   text-align: center;
-  background-blend-mode: multiply;
-  background-color: #1a1025;
 }
 
 .exclusive-content {
@@ -692,7 +701,9 @@ button {
   color: var(--text-secondary);
 }
 
-/* ---------- LIFESTYLE / LOOKBOOK ---------- */
+/* =============================================
+   LIFESTYLE / LOOKBOOK
+   ============================================= */
 .lifestyle-section {
   padding: 100px 0;
 }
@@ -738,7 +749,9 @@ button {
   letter-spacing: 2px;
 }
 
-/* ---------- COUNTDOWN TIMER ---------- */
+/* =============================================
+   COUNTDOWN TIMER
+   ============================================= */
 .countdown-section {
   padding: 80px 0;
   background: var(--bg-secondary);
@@ -783,7 +796,9 @@ button {
   margin-top: 20px;
 }
 
-/* ---------- NEWSLETTER SECTION ---------- */
+/* =============================================
+   NEWSLETTER SECTION
+   ============================================= */
 .newsletter-section {
   padding: 80px 0;
 }
@@ -837,7 +852,9 @@ button {
   margin-top: 15px;
 }
 
-/* ---------- FOOTER ---------- */
+/* =============================================
+   FOOTER
+   ============================================= */
 .footer {
   background: #0a0710;
   border-top: 1px solid #1c1725;
@@ -929,14 +946,16 @@ button {
   color: var(--accent);
 }
 
-/* ---------- FLOATING WHATSAPP ---------- */
+/* =============================================
+   FLOATING WHATSAPP
+   ============================================= */
 .floating-whatsapp {
   position: fixed;
   bottom: 30px;
   right: 30px;
   width: 60px;
   height: 60px;
-  background: #25D366;
+  background: #25d366;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -953,11 +972,9 @@ button {
   0% {
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
   }
-
   70% {
     box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
   }
-
   100% {
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
   }
@@ -967,7 +984,9 @@ button {
   transform: scale(1.1);
 }
 
-/* ---------- TOAST ---------- */
+/* =============================================
+   TOAST NOTIFICATION
+   ============================================= */
 .toast {
   position: fixed;
   bottom: 30px;
@@ -988,11 +1007,15 @@ button {
   opacity: 1;
 }
 
-/* ---------- SCROLL REVEAL (IMPROVED) ---------- */
+/* =============================================
+   SCROLL REVEAL
+   ============================================= */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  transition:
+    opacity 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1),
+    transform 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1);
   will-change: opacity, transform;
 }
 
@@ -1009,9 +1032,11 @@ button {
   }
 }
 
-/* ---------- RESPONSIVE BREAKPOINTS (FULLY FIXED) ---------- */
+/* =============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================= */
 
-/* Tablet (768px - 992px) */
+/* ---------- Tablet (992px and below) ---------- */
 @media (max-width: 992px) {
   .nav-list {
     display: none;
@@ -1037,7 +1062,7 @@ button {
   }
 }
 
-/* Mobile Landscape & Small Tablets (576px - 768px) */
+/* ---------- Mobile Landscape & Small Tablets (768px and below) ---------- */
 @media (max-width: 768px) {
   .container {
     padding: 0 16px;
@@ -1111,7 +1136,6 @@ button {
 
   .exclusive-section {
     padding: 60px 0;
-    background-attachment: scroll;
   }
 
   .exclusive-title {
@@ -1125,10 +1149,6 @@ button {
   .exclusive-description {
     font-size: 0.9rem;
     padding: 0 16px;
-  }
-
-  .lookbook-grid {
-    gap: 12px;
   }
 
   .lookbook-item {
@@ -1226,7 +1246,7 @@ button {
   }
 }
 
-/* Mobile Portrait (up to 576px) */
+/* ---------- Mobile Portrait (576px and below) ---------- */
 @media (max-width: 576px) {
   .container {
     padding: 0 12px;
@@ -1404,7 +1424,7 @@ button {
   }
 }
 
-/* Extra small devices (up to 380px) */
+/* ---------- Extra Small (380px and below) ---------- */
 @media (max-width: 380px) {
   .hero-brand {
     font-size: 1.8rem;
@@ -1428,5 +1448,214 @@ button {
     font-size: 1.4rem;
     bottom: 15px;
     right: 15px;
+  }
+}
+
+/* =============================================
+   MOBILE FIXES – PRODUCTS, NEWSLETTER, LOOKBOOK
+   ============================================= */
+
+/* ---------- PRODUCT GRID – Mobile (576px) ---------- */
+@media (max-width: 576px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 12px;
+  }
+
+  .product-card {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .product-info {
+    padding: 16px 18px 20px;
+    text-align: center;
+  }
+
+  .product-name {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .product-price {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .product-features {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.65rem;
+    margin-bottom: 14px;
+  }
+
+  .btn-product {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 0.85rem;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .product-overlay-actions {
+    display: none;
+  }
+}
+
+/* ---------- NEWSLETTER – Mobile ---------- */
+@media (max-width: 768px) {
+  .newsletter-inner {
+    padding: 30px 16px;
+  }
+
+  .newsletter-title {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .newsletter-description {
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 0 8px;
+  }
+
+  .input-group {
+    flex-direction: column;
+    gap: 12px;
+    max-width: 100%;
+    padding: 0 8px;
+  }
+
+  .newsletter-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .newsletter-btn {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .newsletter-note {
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .newsletter-inner {
+    padding: 24px 12px;
+  }
+
+  .newsletter-title {
+    font-size: 1.3rem;
+  }
+
+  .newsletter-description {
+    font-size: 0.8rem;
+  }
+
+  .newsletter-input {
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .newsletter-btn {
+    padding: 10px 14px;
+    font-size: 0.85rem;
+  }
+}
+
+/* ---------- LOOKBOOK – Mobile ---------- */
+@media (max-width: 992px) {
+  .lookbook-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: auto;
+    gap: 12px;
+    padding: 0 8px;
+  }
+
+  .lookbook-item {
+    height: 220px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .lookbook-item.large {
+    grid-row: auto;
+    height: 250px;
+  }
+
+  .lookbook-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .lookbook-overlay {
+    padding: 14px 16px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+  }
+
+  .lookbook-overlay span {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lookbook-item {
+    height: 180px;
+  }
+
+  .lookbook-item.large {
+    height: 200px;
+  }
+
+  .lookbook-item img {
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .lookbook-item {
+    height: 160px;
+    border-radius: 4px;
+  }
+
+  .lookbook-item.large {
+    height: 180px;
+  }
+
+  .lookbook-overlay {
+    padding: 10px 12px;
+  }
+
+  .lookbook-overlay span {
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
   }
 }

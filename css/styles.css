@@ -342,7 +342,7 @@ button {
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  background: url("/images/hero background.jpeg") center/cover no-repeat;
+  background: url("/images/hero-bg.jpeg") center/cover no-repeat;
   background-blend-mode: overlay;
   background-color: rgba(32, 29, 37, 0.75);
 }

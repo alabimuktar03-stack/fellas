@@ -7,17 +7,36 @@
       name="description"
       content="fellaż - Sharp. Street. Smart. Built for the real ones. Premium streetwear brand."
     />
+
+    <!-- ===== OPEN GRAPH / SOCIAL MEDIA META TAGS ===== -->
+    <meta property="og:title" content="fellaż | Sharp. Street. Smart." />
+    <meta
+      property="og:description"
+      content="Premium streetwear for the real ones. Cosmic energy, street DNA."
+    />
+    <meta
+      property="og:image"
+      content="https://fellas-com.onrender.com/images/og-image.jpg"
+    />
+    <meta property="og:url" content="https://fellas-com.onrender.com/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <title>fellaż | Sharp. Street. Smart.</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
@@ -121,7 +140,7 @@
           DNA.
         </p>
         <div class="hero-buttons">
-          <a href="#shop" class="btn btn-primary pulse-btn">SHOP NOW</a>
+          <a href="shop.html" class="btn btn-primary pulse-btn">SHOP NOW</a>
           <a href="#latest-drop" class="btn btn-outline">LATEST DROP</a>
         </div>
       </div>
@@ -145,7 +164,7 @@
             <div class="product-badge">HOT</div>
             <div class="product-image-wrapper">
               <img
-                src="images/Graphic Streetwear T-Shirt.jpeg"
+                src="images/graphic-streetwear-tee.jpeg"
                 alt="COSMIC CREW TEE"
                 class="product-image"
                 loading="lazy"
@@ -234,7 +253,7 @@
             <div class="product-badge badge-new">NEW</div>
             <div class="product-image-wrapper">
               <img
-                src="images/Cube-tee.jpeg"
+                src="images/cube-tee.jpeg"
                 alt="Cube Tee"
                 class="product-image"
                 loading="lazy"
@@ -324,7 +343,7 @@
             <div class="product-badge badge-new">NEW</div>
             <div class="product-image-wrapper">
               <img
-                src="images/Inspirational Graphic Long-Sleeve Tee.jpeg"
+                src="images/inspirational-long-sleeve-tee.jpeg"
                 alt="Inspirational Graphic Long-Sleeve Tee"
                 class="product-image"
                 loading="lazy"
@@ -371,7 +390,7 @@
             <div class="product-badge badge-new">NEW</div>
             <div class="product-image-wrapper">
               <img
-                src="images/No-sleeve.jpg"
+                src="images/no-sleeve.jpg"
                 alt="Inspirational Graphic No-Sleeve Tee"
                 class="product-image"
                 loading="lazy"
@@ -429,8 +448,9 @@
       </div>
     </section>
 
-    <!-- 🔥 LIFESTYLE / LOOKBOOK SECTION -->
-    <!-- <section class="lifestyle-section">
+    <!-- 🔥 LIFESTYLE / LOOKBOOK SECTION (COMMENTED OUT – KEEP AS IS) -->
+    <!-- 
+    <section class="lifestyle-section">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">LIFESTYLE</h2>
@@ -443,10 +463,7 @@
               src="images/hero-bg.png"
               alt="fellaż Lifestyle"
               loading="lazy"
-              onerror="
-                this.style.background = 'linear-gradient(135deg, #111, #222)';
-                this.alt = 'Lookbook Image 1';
-              "
+              onerror="this.style.background = 'linear-gradient(135deg, #111, #222)'; this.alt = 'Lookbook Image 1';"
             />
             <div class="lookbook-overlay">
               <span>Street Edition</span>
@@ -457,11 +474,7 @@
               src="images/lookbook-2.jpg"
               alt="fellaż Lifestyle"
               loading="lazy"
-              onerror="
-                this.style.background =
-                  'linear-gradient(135deg, #1a1a2e, #222)';
-                this.alt = 'Lookbook Image 2';
-              "
+              onerror="this.style.background = 'linear-gradient(135deg, #1a1a2e, #222)'; this.alt = 'Lookbook Image 2';"
             />
             <div class="lookbook-overlay">
               <span>Cosmic Drop</span>
@@ -472,11 +485,7 @@
               src="images/lookbook-3.jpg"
               alt="fellaż Lifestyle"
               loading="lazy"
-              onerror="
-                this.style.background =
-                  'linear-gradient(135deg, #222, #1a1a2e)';
-                this.alt = 'Lookbook Image 3';
-              "
+              onerror="this.style.background = 'linear-gradient(135deg, #222, #1a1a2e)'; this.alt = 'Lookbook Image 3';"
             />
             <div class="lookbook-overlay">
               <span>Urban Flow</span>
@@ -484,7 +493,8 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
+    -->
 
     <!-- 🔥 COUNTDOWN TIMER SECTION -->
     <section class="countdown-section" id="countdown">
@@ -646,93 +656,25 @@
     <!-- 🔥 TOAST NOTIFICATION -->
     <div class="toast" id="toast"></div>
 
+    <!-- ===== SCRIPTS ===== -->
+    <!-- Main script (cart functions, search, countdown, etc.) -->
     <script src="js/script.js"></script>
+    <!-- ============================================= -->
+    <!-- PAGE-SPECIFIC INITIALIZATION (if needed)      -->
+    <!-- ============================================= -->
     <script>
-      // 🔥 HOMEPAGE CART STORAGE (same as shop/product pages)
-      function showToast(message) {
-        const toast = document.getElementById("toast");
-        toast.textContent = message;
-        toast.classList.add("show");
-        setTimeout(() => toast.classList.remove("show"), 2500);
-      }
-
-      function updateCartBadge() {
+      // This ensures the cart badge is up‑to‑date when the page loads.
+      // All the main functions (showToast, updateCartBadge, addToCart)
+      // are already defined in script.js – this block only calls them.
+      (function initHomepage() {
+        // Ensure cart badge is correct
         const cart =
           JSON.parse(localStorage.getItem("fellaz_cart_items")) || [];
         const total = cart.reduce((sum, item) => sum + item.quantity, 0);
-        document.querySelector(".cart-count").textContent = total;
+        const badge = document.querySelector(".cart-count");
+        if (badge) badge.textContent = total;
         localStorage.setItem("fellaz_cart", total);
-      }
-
-      function addToCart(
-        productId,
-        productName,
-        productPrice,
-        size = "M",
-        quantity = 1,
-      ) {
-        let cart = JSON.parse(localStorage.getItem("fellaz_cart_items")) || [];
-        const existingIndex = cart.findIndex(
-          (item) => item.id === productId && item.size === size,
-        );
-        if (existingIndex !== -1) {
-          cart[existingIndex].quantity += quantity;
-        } else {
-          cart.push({ id: productId, size: size, quantity: quantity });
-        }
-        localStorage.setItem("fellaz_cart_items", JSON.stringify(cart));
-        updateCartBadge();
-        showToast(`🔥 ${productName} (${size}) added to bag!`);
-      }
-
-      // Attach event listeners to all "Add to Cart" buttons
-      document.querySelectorAll(".add-to-cart").forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          e.preventDefault();
-          e.stopPropagation(); // prevent card click if the whole card is clickable
-          const id = parseInt(btn.dataset.id);
-          const name = btn.dataset.name;
-          const price = parseInt(btn.dataset.price);
-          addToCart(id, name, price, "M", 1);
-        });
-      });
-
-      // Quick view (optional toast)
-      document.querySelectorAll(".quick-view-btn").forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          showToast("👀 Quick view coming soon");
-        });
-      });
-
-      // Quick add (same as Add to Cart) – for the little bag icon
-      document
-        .querySelectorAll(".quick-add-btn:not(.disabled)")
-        .forEach((btn) => {
-          btn.addEventListener("click", (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            const card = btn.closest(".product-card");
-            const id = parseInt(card.dataset.id);
-            const name = card.querySelector(".product-name").innerText;
-            const priceText = card
-              .querySelector(".product-price")
-              .innerText.replace(/[^0-9]/g, "");
-            const price = parseInt(priceText);
-            addToCart(id, name, price, "M", 1);
-          });
-        });
-
-      // Initialize cart badge on page load
-      updateCartBadge();
-
-      // Also listen for storage events (if cart changes in another tab)
-      window.addEventListener("storage", (e) => {
-        if (e.key === "fellaz_cart_items" || e.key === "fellaz_cart") {
-          updateCartBadge();
-        }
-      });
+      })();
     </script>
   </body>
 </html>

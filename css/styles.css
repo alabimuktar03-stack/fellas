@@ -153,10 +153,6 @@ button {
   transition: text-shadow 0.3s;
 }
 
-.logo img {
-  display: block;
-}
-
 .nav-list {
   display: flex;
   gap: 32px;

@@ -54,14 +54,7 @@
     <!-- 🔥 HEADER / NAVIGATION -->
     <header class="header" id="header">
       <div class="container header-inner">
-        <a href="index.html" class="logo">
-          <img
-            src="images/logo.png"
-            width="100"
-            height="50"
-            alt="fellaż logo"
-          />
-        </a>
+        <a href="index.html" class="logo">FELLAŻ</a>
         <nav class="nav" id="nav">
           <ul class="nav-list">
             <li><a href="index.html" class="nav-link active">Home</a></li>
@@ -206,16 +199,16 @@
 
           <!-- Product 2 -->
           <div class="product-card" data-id="2">
-            <div class="product-badge badge">NEW</div>
+            <div class="product-badge">HOT</div>
             <div class="product-image-wrapper">
               <img
                 src="images/real-ones-hoodie.jpeg"
-                alt="Real Ones Hoodie"
+                alt="REAL ONES HOODIE"
                 class="product-image"
                 loading="lazy"
                 onerror="
                   this.style.background =
-                    'linear-gradient(135deg, #1a1a2e, #3d1b2d)';
+                    'linear-gradient(135deg, #1a1a2e, #2d1b3d)';
                   this.alt = 'Image Placeholder';
                 "
               />
@@ -223,12 +216,8 @@
                 <button class="quick-view-btn" aria-label="Quick view">
                   <i class="fas fa-eye"></i>
                 </button>
-                <button
-                  class="quick-add-btn disabled"
-                  aria-label="Sold out"
-                  disabled
-                >
-                  <i class="fas fa-times"></i>
+                <button class="quick-add-btn" aria-label="Add to cart">
+                  <i class="fas fa-shopping-bag"></i>
                 </button>
               </div>
             </div>
@@ -242,8 +231,13 @@
                   ><i class="fas fa-globe-africa"></i> Worldwide Shipping</span
                 >
               </div>
-              <button class="btn btn-product btn-sold-out" disabled>
-                Sold Out
+              <button
+                class="btn btn-product add-to-cart"
+                data-id="2"
+                data-name="REAL ONES HOODIE"
+                data-price="25000"
+              >
+                Add to Cart
               </button>
             </div>
           </div>
@@ -443,7 +437,7 @@
             fellaż isn't just clothing. It's a statement. A mindset. A movement
             for those who dare to stand out.
           </p>
-          <a href="#shop" class="btn btn-primary">Explore the Collection</a>
+          <a href="shop.html" class="btn btn-primary">Explore the Collection</a>
         </div>
       </div>
     </section>
@@ -662,19 +656,5 @@
     <!-- ============================================= -->
     <!-- PAGE-SPECIFIC INITIALIZATION (if needed)      -->
     <!-- ============================================= -->
-    <script>
-      // This ensures the cart badge is up‑to‑date when the page loads.
-      // All the main functions (showToast, updateCartBadge, addToCart)
-      // are already defined in script.js – this block only calls them.
-      (function initHomepage() {
-        // Ensure cart badge is correct
-        const cart =
-          JSON.parse(localStorage.getItem("fellaz_cart_items")) || [];
-        const total = cart.reduce((sum, item) => sum + item.quantity, 0);
-        const badge = document.querySelector(".cart-count");
-        if (badge) badge.textContent = total;
-        localStorage.setItem("fellaz_cart", total);
-      })();
-    </script>
   </body>
 </html>

@@ -36,14 +36,7 @@
     <!-- Header / Navigation -->
     <header class="header" id="header">
       <div class="container header-inner">
-        <a href="index.html" class="logo">
-          <img
-            src="images/logo.png"
-            width="100"
-            height="80"
-            alt="fellaż logo"
-          />
-        </a>
+        <a href="index.html" class="logo">fellaż</a>
         <nav class="nav" id="nav">
           <ul class="nav-list">
             <li><a href="index.html" class="nav-link">Home</a></li>
@@ -270,78 +263,169 @@
 
     <script src="js/script.js"></script>
     <script>
-      // Product database (same as shop/product pages)
+      // =============================================
+      // 🔥 PRODUCT DATABASE – MUST MATCH HOMEPAGE
+      // =============================================
       const products = [
         {
           id: 1,
           name: "COSMIC CREW TEE",
           price: 25000,
-          category: "tee",
-          image: "images/Graphic Streetwear T-Shirt.jpeg",
-          badge: "HOT",
-          inStock: true,
+          image: "images/graphic-streetwear-tee.jpeg",
         },
         {
           id: 2,
           name: "REAL ONES HOODIE",
           price: 25000,
-          category: "hoodie",
           image: "images/real-ones-hoodie.jpeg",
-          badge: "NEW",
-          inStock: false,
-        },
+        }, // ✅ Product 2 exists
         {
           id: 3,
           name: "CUBE TEE",
           price: 25000,
-          category: "tee",
-          image: "images/Cube-tee.jpeg",
-          badge: "NEW",
-          inStock: true,
+          image: "images/cube-tee.jpeg",
         },
         {
           id: 4,
           name: "GRAPHIC STREETWEAR TEE",
           price: 20000,
-          category: "tee",
           image: "images/cosmic-crew-tee.jpeg",
-          badge: "",
-          inStock: true,
         },
         {
           id: 5,
           name: "INSPIRATIONAL LONG SLEEVE",
           price: 30000,
-          category: "longsleeve",
-          image: "images/Inspirational Graphic Long-Sleeve Tee.jpeg",
-          badge: "",
-          inStock: true,
+          image: "images/inspirational-long-sleeve-tee.jpeg",
         },
         {
           id: 6,
           name: "INSPIRATIONAL NO SLEEVE",
           price: 10000,
-          category: "sleeveless",
-          image: "images/No-sleeve.jpg",
-          badge: "",
-          inStock: true,
+          image: "images/no-sleeve.jpg",
         },
       ];
 
-      // Cart structure: { id, size, quantity }
       let cart = [];
 
+      // =============================================
+      // 🔥 LOAD CART & DEBUG
+      // =============================================
       function loadCart() {
         const stored = localStorage.getItem("fellaz_cart_items");
         if (stored) {
           cart = JSON.parse(stored);
+          console.log("✅ Cart loaded:", cart);
         } else {
           cart = [];
+          console.log("⚠️ No cart found in localStorage");
         }
+
+        // 🔥 Check if product IDs in cart exist in the product array
+        cart.forEach((item) => {
+          const exists = products.find((p) => p.id === item.id);
+          if (!exists) {
+            console.warn(
+              `⚠️ Product ID ${item.id} not found in cart product array!`,
+            );
+          }
+        });
+
         renderCart();
         updateCartCountDisplay();
       }
 
+      // =============================================
+      // 🔥 RENDER CART
+      // =============================================
+      function renderCart() {
+        const container = document.getElementById("cartItemsContainer");
+        const subtotalElem = document.getElementById("subtotal");
+        const totalElem = document.getElementById("total");
+        const shippingElem = document.getElementById("shipping");
+
+        if (!cart.length) {
+          container.innerHTML = `
+            <div class="empty-cart">
+              <i class="fas fa-shopping-bag"></i>
+              <p>Your cart is empty.</p>
+              <a href="shop.html" class="btn-shop-now">Shop Now</a>
+            </div>
+          `;
+          subtotalElem.textContent = "₦0";
+          totalElem.textContent = "₦0";
+          shippingElem.textContent = "Calculated at next step";
+          return;
+        }
+
+        let subtotal = 0;
+        let itemsHtml = "";
+
+        cart.forEach((item, idx) => {
+          const product = products.find((p) => p.id === item.id);
+          if (!product) {
+            console.warn(`⚠️ Product ID ${item.id} not found – skipping`);
+            return;
+          }
+          const itemTotal = product.price * item.quantity;
+          subtotal += itemTotal;
+          itemsHtml += `
+            <div class="cart-item" data-index="${idx}">
+              <div class="cart-item-product">
+                <img src="${product.image}" alt="${product.name}" onerror="this.src='https://placehold.co/100x100/1a151f/cba258?text=fellaż'">
+                <div class="cart-item-details">
+                  <h4>${product.name}</h4>
+                  <p class="cart-item-size">Size: ${item.size || "M"}</p>
+                </div>
+              </div>
+              <div class="cart-item-price">₦${product.price.toLocaleString()}</div>
+              <div class="cart-item-quantity">
+                <button class="qty-decr" data-index="${idx}">-</button>
+                <span>${item.quantity}</span>
+                <button class="qty-incr" data-index="${idx}">+</button>
+              </div>
+              <div class="cart-item-total">₦${itemTotal.toLocaleString()}</div>
+              <div class="cart-item-remove">
+                <button class="remove-btn" data-index="${idx}"><i class="fas fa-trash-alt"></i></button>
+              </div>
+            </div>
+          `;
+        });
+
+        container.innerHTML = itemsHtml;
+
+        const shipping = subtotal > 50000 ? 0 : 2500;
+        shippingElem.textContent =
+          shipping === 0 ? "Free" : `₦${shipping.toLocaleString()}`;
+        const total = subtotal + shipping;
+        subtotalElem.textContent = `₦${subtotal.toLocaleString()}`;
+        totalElem.textContent = `₦${total.toLocaleString()}`;
+
+        // Attach event listeners
+        document.querySelectorAll(".qty-decr").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const idx = parseInt(btn.dataset.index);
+            const newQty = cart[idx].quantity - 1;
+            updateQuantity(idx, newQty);
+          });
+        });
+        document.querySelectorAll(".qty-incr").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const idx = parseInt(btn.dataset.index);
+            const newQty = cart[idx].quantity + 1;
+            updateQuantity(idx, newQty);
+          });
+        });
+        document.querySelectorAll(".remove-btn").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const idx = parseInt(btn.dataset.index);
+            removeCartItem(idx);
+          });
+        });
+      }
+
+      // =============================================
+      // 🔥 CART OPERATIONS
+      // =============================================
       function saveCart() {
         localStorage.setItem("fellaz_cart_items", JSON.stringify(cart));
         updateCartCountDisplay();
@@ -358,7 +442,7 @@
         cart.splice(index, 1);
         saveCart();
         renderCart();
-        showToast("Item removed from cart");
+        showToast("🗑️ Item removed from cart");
       }
 
       function updateQuantity(index, newQuantity) {
@@ -372,82 +456,6 @@
         renderCart();
       }
 
-      function renderCart() {
-        const container = document.getElementById("cartItemsContainer");
-        const subtotalElem = document.getElementById("subtotal");
-        const totalElem = document.getElementById("total");
-
-        if (!cart.length) {
-          container.innerHTML = `
-                    <div class="empty-cart">
-                        <i class="fas fa-shopping-bag"></i>
-                        <p>Your cart is empty.</p>
-                        <a href="shop.html" class="btn-shop-now">Shop Now</a>
-                    </div>
-                `;
-          subtotalElem.textContent = "₦0";
-          totalElem.textContent = "₦0";
-          return;
-        }
-
-        let subtotal = 0;
-        let itemsHtml = "";
-
-        cart.forEach((item, idx) => {
-          const product = products.find((p) => p.id === item.id);
-          if (!product) return;
-          const itemTotal = product.price * item.quantity;
-          subtotal += itemTotal;
-          itemsHtml += `
-                    <div class="cart-item" data-index="${idx}">
-                        <div class="cart-item-product">
-                            <img src="${product.image}" alt="${product.name}" onerror="this.src='https://placehold.co/100x100/1a151f/cba258?text=fellaż'">
-                            <div class="cart-item-details">
-                                <h4>${product.name}</h4>
-                                <p class="cart-item-size">Size: ${item.size || "M"}</p>
-                            </div>
-                        </div>
-                        <div class="cart-item-price">₦${product.price.toLocaleString()}</div>
-                        <div class="cart-item-quantity">
-                            <button class="qty-decr" data-index="${idx}">-</button>
-                            <span>${item.quantity}</span>
-                            <button class="qty-incr" data-index="${idx}">+</button>
-                        </div>
-                        <div class="cart-item-total">₦${itemTotal.toLocaleString()}</div>
-                        <div class="cart-item-remove">
-                            <button class="remove-btn" data-index="${idx}"><i class="fas fa-trash-alt"></i></button>
-                        </div>
-                    </div>
-                `;
-        });
-
-        container.innerHTML = itemsHtml;
-        subtotalElem.textContent = `₦${subtotal.toLocaleString()}`;
-        totalElem.textContent = `₦${subtotal.toLocaleString()}`; // shipping added later
-
-        // Attach event listeners
-        document.querySelectorAll(".qty-decr").forEach((btn) => {
-          btn.addEventListener("click", (e) => {
-            const idx = parseInt(btn.dataset.index);
-            const newQty = cart[idx].quantity - 1;
-            updateQuantity(idx, newQty);
-          });
-        });
-        document.querySelectorAll(".qty-incr").forEach((btn) => {
-          btn.addEventListener("click", (e) => {
-            const idx = parseInt(btn.dataset.index);
-            const newQty = cart[idx].quantity + 1;
-            updateQuantity(idx, newQty);
-          });
-        });
-        document.querySelectorAll(".remove-btn").forEach((btn) => {
-          btn.addEventListener("click", (e) => {
-            const idx = parseInt(btn.dataset.index);
-            removeCartItem(idx);
-          });
-        });
-      }
-
       function showToast(message) {
         const toast = document.getElementById("toast");
         toast.textContent = message;
@@ -455,10 +463,12 @@
         setTimeout(() => toast.classList.remove("show"), 2500);
       }
 
-      // Initialize page
+      // =============================================
+      // 🔥 INITIALIZE
+      // =============================================
       loadCart();
 
-      // Update header cart count from localStorage changes (sync)
+      // Listen for cart changes across tabs
       window.addEventListener("storage", (e) => {
         if (e.key === "fellaz_cart") {
           const count = parseInt(e.newValue) || 0;
